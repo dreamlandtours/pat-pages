@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Solo Travelers: Join a Dreamland Tour | Dreamland Safari Tours</title>
+<meta name="description" content="Traveling solo in Southern Utah? Join a Dreamland tour that already has guests booked. Small groups, expert guides, and the normal price per person.">
+<link rel="canonical" href="https://solo.dreamlandtours.net/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dreamland Safari Tours">
+<meta property="og:title" content="Traveling solo? Hop on a Dreamland tour that is already going">
+<meta property="og:description" content="Every departure already has guests booked. Pick a date, pay the normal price, and explore Southern Utah with a small group and an expert guide.">
+<meta property="og:url" content="https://solo.dreamlandtours.net/">
+<meta property="og:image" content="https://solo.dreamlandtours.net/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2a2220">
+<link rel="icon" href="img/dreamland-badge.png" type="image/png">
+<link rel="preload" href="fonts/YanoneKaffeesatz-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/hero.jpg" as="image">
+<link rel="stylesheet" href="styles.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNL6PF5T8D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-JNL6PF5T8D');</script>
+</head>
+<body>
+
+<header class="top">
+  <nav class="nav" aria-label="Main">
+    <ul class="nav-l">
+      <li><a href="https://dreamlandtours.net/tours/">All tours</a></li>
+      <li><a href="https://dreamlandtours.net/about/">About</a></li>
+      <li><a href="https://dreamlandtours.net/guest-reviews/">Reviews</a></li>
+    </ul>
+    <a class="logo" href="https://dreamlandtours.net" aria-label="Dreamland Safari Tours home"><img src="img/dreamland-badge.png" alt="Dreamland Safari Tours, Kanab, Utah" width="92" height="92"></a>
+    <ul class="nav-r">
+      <li><a href="https://dreamlandtours.net/faqs/">FAQs</a></li>
+      <li><a href="https://dreamlandtours.net/contact/">Contact</a></li>
+      <li><a class="phone" href="tel:+18012516036">(801) 251-6036</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-in">
+    <p class="kicker">Solo travelers welcome</p>
+    <h1>Traveling solo? Hop on a tour that is already going.</h1>
+    <p class="sub">Every departure below already has guests booked. Pick a date, pay the normal price per person, and explore the red rock country of Southern Utah and Northern Arizona with a small group and an expert local guide.</p>
+    <a class="cta" href="#tours">See open dates</a>
+  </div>
+</section>
+
+<section class="finder" aria-label="Find your dates">
+  <form id="filters" class="finder-in" novalidate>
+    <div class="tabs" role="tablist" aria-label="How to browse the tours">
+      <button type="button" role="tab" id="tab-days" data-view="days" aria-selected="true" aria-controls="view-days">Next 7 days</button>
+      <button type="button" role="tab" id="tab-date" data-view="date" aria-selected="false" aria-controls="view-date" tabindex="-1">By date</button>
+      <button type="button" role="tab" id="tab-tours" data-view="tours" aria-selected="false" aria-controls="view-tours" tabindex="-1">By tour</button>
+    </div>
+    <div id="finder-date" hidden>
+    <h2>When are you in Kanab?</h2>
+    <div class="fields">
+      <label>From <input type="date" id="from"></label>
+      <label>To <input type="date" id="to"></label>
+      <button type="submit" id="go" class="go">Show available tours</button>
+      <div class="ranges" role="group" aria-label="Quick date ranges">
+        <button type="button" data-days="13">Next 2 weeks</button>
+        <button type="button" data-days="29">Next month</button>
+        <button type="button" data-days="all">Everything</button>
+      </div>
+    </div>
+    </div>
+    <div id="finder-tours" hidden>
+      <h2>What kind of tour?</h2>
+      <div class="lengths" role="group" aria-label="Tour length">
+        <button type="button" class="len-btn" data-len="half" aria-pressed="false">Half day</button>
+        <button type="button" class="len-btn" data-len="full" aria-pressed="false">Full day</button>
+        <button type="button" class="len-btn" data-len="multi" aria-pressed="false">Multi-day</button>
+      </div>
+      <details id="tour-menu" class="tour-menu">
+        <summary id="tour-menu-sum">All tours</summary>
+        <div class="tour-panel">
+          <div id="tour-opts" class="tour-opts"></div>
+          <button type="button" id="tour-clear" class="linkbtn">Clear choices</button>
+        </div>
+      </details>
+    </div>
+    <p id="finder-days" class="finder-days">Every tour you can join, day by day. Hover over a picture, or tap it, for the details. Looking further out? Try <button type="button" id="to-date" class="linkbtn">By date</button>. Want one tour only? Try <button type="button" id="to-tours" class="linkbtn">By tour</button>.</p>
+  </form>
+</section>
+
+<main id="tours">
+  <noscript><p class="notice">This page needs JavaScript. Call <a href="tel:+18012516036">(801) 251-6036</a> and we will find you a tour to join.</p></noscript>
+  <ol class="steps" aria-label="How booking works">
+    <li><b>1</b><span>Tap <em>Book</em> on a date</span></li>
+    <li><b>2</b><span>Choose that same date in checkout</span></li>
+    <li><b>3</b><span>Check out and you are set</span></li>
+  </ol>
+
+  <p id="status" class="status" role="status" aria-live="polite">Loading tours&hellip;</p>
+  <p id="stale" class="notice" hidden>This list may be out of date. Call <a href="tel:+18012516036">(801) 251-6036</a> to confirm seats.</p>
+
+  <div id="view-date" role="tabpanel" aria-labelledby="tab-date" hidden>
+    <div id="date-list" class="days"></div>
+  </div>
+
+  <div id="view-tours" role="tabpanel" aria-labelledby="tab-tours" hidden>
+  <p id="code-note" class="code-note" hidden></p>
+  <section id="day" aria-labelledby="day-h" hidden>
+    <h2 id="day-h">Day tours you can join
+      <span class="tip-wrap"><button type="button" class="help" aria-label="What does this list show?" aria-expanded="false" aria-controls="tip-day">?</button>
+      <span id="tip-day" role="tooltip" class="tip">&ldquo;Going&rdquo; counts the guests already booked on that truck. A solo traveler pays the normal price and rides with them.</span></span>
+    </h2>
+    <div id="day-list" class="grid"></div>
+  </section>
+
+  <section id="anniv" aria-labelledby="anniv-h" hidden>
+    <h2 id="anniv-h">25th anniversary adventures</h2>
+    <p class="intro">One-time trips led by Paul and Sunny to celebrate 25 years. Each is a confirmed departure, and each comes off this page once it has started.</p>
+    <div id="anniv-list" class="grid"></div>
+  </section>
+
+  <section id="coll" aria-labelledby="coll-h" hidden>
+    <h2 id="coll-h">Overnights and backpacking</h2>
+    <p class="intro">These are confirmed departures, open to solo travelers. Most fill as the date approaches.</p>
+    <div id="coll-list" class="grid"></div>
+  </section>
+
+  <div id="empty" class="empty" hidden>
+    <h2>Nothing is scheduled yet for this choice</h2>
+    <p>Call us at <a href="tel:+18012516036">(801) 251-6036</a> and we will try to build a trip.</p>
+    <button type="button" id="widen" class="secondary" hidden>Show all tours</button>
+  </div>
+  </div>
+
+  <div id="view-days" role="tabpanel" aria-labelledby="tab-days">
+    <div id="days-list" class="days"></div>
+  </div>
+</main>
+
+<section class="why" aria-label="Why travel with Dreamland">
+  <div class="why-in">
+    <div><h3>Small groups</h3><p>You share the day with a handful of other travelers, not a crowd.</p></div>
+    <div><h3>Expert guides</h3><p>Naturalist guides who know this landscape and love showing it to you.</p></div>
+    <div><h3>One fair price</h3><p>Join a departure that already has guests and you pay the normal per-person price, with no two-person minimum.</p></div>
+  </div>
+  <div class="trust">
+    <p>Top-rated on TripAdvisor every year since 2012.</p>
+    <img src="img/trusted-by.png" alt="Travelers' Choice. Featured in Business Insider, USA Today, Outside and Arizona Highways." width="300" height="170" loading="lazy">
+  </div>
+</section>
+
+<section class="call-band">
+  <div class="call-in">
+    <h2>Do not see your dates?</h2>
+    <p>Tell us when you are in Kanab and we will do our best to build a trip around you.</p>
+    <a class="cta" href="tel:+18012516036">Call (801) 251-6036</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="foot-in">
+    <img src="img/dreamland-badge.png" alt="" width="64" height="64" loading="lazy">
+    <div>
+      <p><strong>Dreamland Safari Tours</strong> &middot; Kanab, Utah &middot; <a href="tel:+18012516036">(801) 251-6036</a></p>
+      <p><a href="https://dreamlandtours.net/tours/">All tours</a> &middot; <a href="https://dreamlandtours.net/faqs/">FAQs</a> &middot; <a href="https://dreamlandtours.net/policies/">Policies</a> &middot; <a href="https://dreamlandtours.net/contact/">Contact</a></p>
+      <p class="fine"><span id="updated"></span><span id="updated-sep"> &middot; </span>Seats come from our live tour calendar and refresh every 30 minutes. Booking happens on Peek, our secure checkout.</p>
+    </div>
+  </div>
+</footer>
+
+<dialog id="permit-dlg" class="permit" aria-labelledby="permit-h">
+  <h2 id="permit-h">A permit is required</h2>
+  <p id="permit-text"></p>
+  <label class="permit-check"><input type="checkbox" id="permit-ok"><span id="permit-ok-text"></span></label>
+  <a id="permit-go" class="btn solid" role="button" href="#" target="_blank" rel="noopener" aria-disabled="true">Continue to checkout</a>
+  <div class="permit-alt">
+    <p id="permit-alt-text"></p>
+    <button type="button" id="permit-alt-btn" class="secondary"></button>
+  </div>
+  <button type="button" id="permit-cancel" class="linkish">Cancel</button>
+</dialog>
+
+<script src="render.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
