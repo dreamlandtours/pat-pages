@@ -4,3 +4,4 @@ drive-record: none — pat-pages is a public GitHub Pages preview host (dreamlan
 
 Examples:
 - `solo-scb-track-*` — Option A preview of the solo page's South Coyote Buttes two-track permit model. Canonical: repo `dreamlandtours/dreamland-join` (branch `desk/scb-track`, BUILD.md) and Dreamland AI COMMAND `projects/2026-W42-join-a-tour-private-preview/scb-two-track-option-a/`.
+- `wave-permit-alternative-*` — preview of the page planned for dreamlandtours.net/wave-permit-alternative/ (AI visibility #4). Canonical: Dreamland AI COMMAND `projects/2026-W47-ai-visibility-wave-page-peekaboo-schema/` (BUILD.md, site/).
