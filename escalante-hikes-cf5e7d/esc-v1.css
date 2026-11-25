@@ -1,0 +1,81 @@
+/* Escalante day hikes: additions to trip-v1.css for the hub, the five hike pages, the Extravaganza page
+   and the private trip page. Dreamland kit only. No dark mode.
+   When page text and this file change together after go-live, save it under a new name (esc-v2.css). */
+
+/* two ways to go: the same block on every Escalante page */
+.ways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:18px 0 0}
+.way{background:var(--panel);border-top:5px solid var(--red);padding:20px 22px 22px;display:flex;flex-direction:column}
+.way.alt{border-top-color:var(--green)}
+.way .k{font:700 .78rem/1.3 Lato,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--green);margin:0 0 6px}
+.way h3{font:700 clamp(1.7rem,3vw,2.1rem)/1.05 var(--display);margin:0 0 8px;color:var(--ink)}
+.way .p{font:700 2.2rem/1 var(--display);margin:6px 0 2px}
+.way .p small{font:400 .95rem/1.35 Lato,sans-serif;color:var(--grey);display:block;margin-top:5px}
+.way ul{margin:12px 0 16px}
+.way .btn{margin-top:auto;text-align:center}
+.way.here{box-shadow:inset 0 0 0 2px var(--tan)}
+@media(max-width:760px){.ways{grid-template-columns:minmax(0,1fr)}}
+
+/* the five days as cards */
+.hikes{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.hikes li{background:var(--panel);display:flex;flex-direction:column}
+.hikes a.ph{display:block;aspect-ratio:3/2;overflow:hidden;background:#4a3a30}
+.hikes a.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.hikes .noph{aspect-ratio:3/2;background:var(--tan);display:flex;align-items:flex-end;padding:14px 16px;font:700 1.9rem/1 var(--display);color:var(--ink)}
+.hikes .b{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.hikes .k{font:700 .76rem/1.3 Lato,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--green);margin:0 0 4px}
+.hikes h3{font:700 1.7rem/1.05 var(--display);margin:0 0 6px}
+.hikes h3 a{color:var(--ink);text-decoration:none}
+.hikes h3 a:hover{color:var(--red)}
+.hikes p{margin:0 0 10px;font-size:.98rem}
+.hikes .f{font-size:.9rem;color:var(--grey);margin:0 0 12px}
+.hikes .go{margin-top:auto;font:700 .84rem/1.3 Lato,sans-serif;text-transform:uppercase;color:var(--red);text-decoration:none}
+.hikes li.here{box-shadow:inset 0 0 0 2px var(--tan)}
+@media(max-width:900px){.hikes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.hikes{grid-template-columns:minmax(0,1fr)}}
+
+/* the day by the clock reuses .days; week table on the Extravaganza page */
+.tbl.week td:first-child{white-space:nowrap;font-weight:700}
+.tbl .big{display:inline-block;font:700 .72rem/1.3 Lato,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:var(--red);border:1px solid var(--red);padding:2px 7px;white-space:nowrap}
+.tbl .slot{display:inline-block;font:700 .72rem/1.3 Lato,sans-serif;letter-spacing:.07em;text-transform:uppercase;color:var(--green);border:1px solid var(--green);padding:2px 7px;white-space:nowrap}
+
+/* fit check: five questions answered in the browser, nothing is sent anywhere */
+.fit{background:var(--panel);border-top:5px solid var(--green);padding:20px 22px 22px;max-width:78ch;margin:22px 0 0}
+.fit h3{margin:0 0 4px;font:700 1.8rem/1.05 var(--display);color:var(--ink)}
+.fit fieldset{border:0;border-top:1px solid var(--tan);margin:0;padding:12px 0}
+.fit legend{float:left;width:100%;font-weight:700;padding:0;margin:0 0 8px}
+.fit label{display:inline-flex;align-items:center;gap:7px;margin:0 16px 4px 0;cursor:pointer}
+.fit input{accent-color:#971A20;width:18px;height:18px}
+.fit .out{border-top:2px solid var(--tan);padding-top:14px;margin-top:4px}
+.fit .out p{margin:0 0 8px}
+.fit .out .v{font:700 1.6rem/1.1 var(--display);margin:0 0 6px}
+.fit .fine{font-size:.86rem;color:var(--grey);margin:10px 0 0}
+
+/* ask an assistant */
+.askai{background:var(--panel);border-left:5px solid var(--tan);padding:16px 20px;max-width:78ch;margin:26px 0 0}
+.askai h3{margin:0 0 6px;font:700 1.5rem/1.1 var(--display);color:var(--ink)}
+.askai p{margin:0 0 10px}
+.askai .row{display:flex;flex-wrap:wrap;gap:8px}
+.askai .row a{display:inline-block;padding:11px 14px;border:1px solid var(--tan);background:#fff;color:var(--ink);font:700 .86rem/1.2 Lato,sans-serif;text-decoration:none}
+.askai .row a:hover{border-color:var(--red);color:var(--red)}
+
+/* price steps on the private page */
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:16px 0 0}
+.steps3 .pane .p{font:700 2.6rem/1 var(--display);margin:0}
+.steps3 .pane .p small{font:400 .95rem/1.35 Lato,sans-serif;color:var(--grey);display:block;margin:5px 0 12px}
+@media(max-width:760px){.steps3{grid-template-columns:minmax(0,1fr)}}
+
+/* honest "new trip" note and owner notes in preview */
+.note{background:var(--panel);border-left:5px solid var(--tan);padding:14px 18px;max-width:70ch;margin:18px 0 0}
+.note p:last-child{margin-bottom:0}
+.photo-wanted{background:var(--tan);color:var(--ink);padding:18px 20px;font-weight:700;max-width:70ch;margin:18px 0 0}
+figure figcaption{font-size:.88rem;color:var(--grey);margin-top:6px}
+.strip{max-width:1100px;margin:30px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;gap:10px}
+.strip figure{margin:0;overflow:hidden;background:#4a3a30}
+.strip img{width:100%;height:100%;object-fit:cover}
+.strip .w2{grid-column:span 2}
+.strip .h2{grid-row:span 2}
+@media(max-width:760px){.strip{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0 0}
+.gallery figure{margin:0}
+.gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+@media(max-width:700px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
