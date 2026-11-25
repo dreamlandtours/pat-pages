@@ -41,7 +41,7 @@ Peekaboo and Spooky are two slot canyons at Dry Fork, down Hole-in-the-Rock Road
 
 **Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch, or ask us about adding one of ours.
 
-**How do I get to Escalante, and where do I stay?** Escalante is a small town on Scenic Byway 12, about a three-hour drive from Kanab. Most guests drive or rent a car. Every hike starts and finishes in town, so you base yourself there for the days you join us. Lodging is yours to book: there are lodges, motels, cabins and campgrounds in and around town, and they fill up in spring and fall.
+**How do I get to Escalante, and where do I stay?** Escalante is a small town on Scenic Byway 12 in southern Utah, and you'll need a car to reach it. The nearest big airports are Las Vegas and Salt Lake City. By road it's about 315 miles from Las Vegas, 285 from Salt Lake City and 270 from Grand Junction, each four and a half to five hours of driving, and 120 miles from Kanab, about two and a half hours. Every hike starts and finishes in town. Lodging isn't part of our price. You book your own place to stay: there are lodges, motels, cabins and campgrounds in and around Escalante, and they fill up in spring and fall.
 
 **What does it cost to cancel?** Our day tour terms apply. Cancel 30 days or more before your hike and the fee is 15%, or you can take a credit toward a future tour. From 11 to 30 days out it's 25%, from 10 days to 48 hours it's 35%, and inside 48 hours or for a no-show it's 100%. The full wording is on our policies page .
 

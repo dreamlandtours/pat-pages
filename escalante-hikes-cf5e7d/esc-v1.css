@@ -79,3 +79,6 @@ figure figcaption{font-size:.88rem;color:var(--grey);margin-top:6px}
 .gallery figure{margin:0}
 .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
 @media(max-width:700px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* a hero that needs its height (the Cathedral's roof and the person below it): narrower than the page, taller than the wide crop */
+@media(min-width:621px){.hero.below.tall .hero-img{width:min(100%,1040px);margin:0 auto;aspect-ratio:16/10;max-height:none}}
