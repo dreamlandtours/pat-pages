@@ -167,7 +167,7 @@ img.zoom{cursor:zoom-in}
 .btn.sm{padding:11px 16px;font-size:.86rem;white-space:nowrap}
 .tbl.dates td{vertical-align:middle}
 .tbl.dates td.act{text-align:right;width:1%}
-@media(max-width:620px){.tbl.dates td.act{text-align:left;padding-top:8px}.tbl.dates td.act .btn{display:block;text-align:center}}
+@media(max-width:620px){.tbl.dates td.act{text-align:left;padding-top:8px;width:auto}.tbl.dates td.act .btn{display:block;text-align:center}}
 .after{counter-reset:s;list-style:none;margin:0 0 18px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
 .after li{counter-increment:s;background:var(--panel);border-top:2px solid var(--tan);padding:14px 16px 16px;font-size:.98rem;line-height:1.45}
 .after li::before{content:counter(s);display:block;font:700 2rem/1 var(--display);color:var(--red);margin-bottom:6px}
@@ -230,3 +230,11 @@ dialog.lb .lb-x{position:absolute;right:8px;top:8px;background:var(--panel);colo
 .map.route{margin-top:26px}
 .map figcaption,.side figcaption{font-size:.84rem;line-height:1.4;color:var(--grey);margin-top:7px}
 @media(max-width:900px){.where{grid-template-columns:minmax(0,1fr);gap:16px}.map.route{margin-top:16px}}
+
+/* difficulty level on the hero: three steps, this trip's step filled in */
+.level{display:inline-flex;margin:16px 0 0;border:2px solid #fff;font:700 .74rem/1 Lato,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.level b,.level i{display:block;padding:8px 12px;font-style:normal;font-weight:700}
+.level b{background:#fff;color:var(--ink)}
+.level i{color:rgba(255,255,255,.82);border-left:1px solid rgba(255,255,255,.55)}
+.level i::before{content:attr(data-t)}
+@media(max-width:420px){.level{font-size:.68rem;letter-spacing:.06em}.level b,.level i{padding:8px 9px}}
