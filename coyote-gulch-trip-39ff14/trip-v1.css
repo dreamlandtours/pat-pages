@@ -261,3 +261,7 @@ dialog.lb .lb-x{position:absolute;right:8px;top:8px;background:var(--panel);colo
 @media(max-width:560px){.why{grid-template-columns:minmax(0,1fr)}}
 
 .proof .what.quote{font:700 1.35rem/1.2 var(--display);letter-spacing:.2px}
+
+/* TripAdvisor's own widgets keep their look; these boxes only hold them */
+.ta-live{margin:0 0 18px;min-height:48px;max-width:100%;overflow:hidden}
+.ta-box{margin:4px 0 18px;min-height:60px;max-width:100%;overflow:hidden}
