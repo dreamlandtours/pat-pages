@@ -63,12 +63,13 @@ h3{font:700 1.9rem/1.1 var(--display);color:var(--ink)}
 .clabel a{display:block;font-weight:700;color:var(--ink);text-decoration:none;line-height:1.2}
 .clabel a:hover{color:var(--red)}
 .clabel span{display:block;font-size:.8rem;color:var(--grey)}
-.track{position:relative;height:68px;margin:0 22px 0 14px}
+.track{position:relative;height:82px;margin:0 22px 0 14px}
 .track i{position:absolute;top:0;bottom:0;width:1px;background:#e7e2d4}
 .track.ticks{height:22px}
 .ticks span{position:absolute;top:0;transform:translateX(-50%);font-size:.8rem;color:var(--grey);font-variant-numeric:tabular-nums}
 .mark{position:absolute;top:33px;width:28px;height:28px;margin:-14px 0 0 -14px;padding:0;border:0;background:none;cursor:pointer;border-radius:50%;-webkit-tap-highlight-color:transparent}
 .mark.lane1{top:49px}
+.mark.lane2{top:65px}
 .mark::before{content:"";position:absolute;left:50%;top:50%;box-sizing:border-box;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;box-shadow:0 0 0 2px var(--panel)}
 .mark.full::before{background:var(--grey)}
 .mark.group::before{background:var(--panel);border:2px solid var(--grey)}
@@ -91,9 +92,9 @@ h3{font:700 1.9rem/1.1 var(--display);color:var(--ink)}
   .axis .clabel{display:none}
   .clabel a,.clabel span{display:inline}
   .clabel span::before{content:" \00b7  "}
-  .track{height:64px;margin:0 16px 0 12px}
+  .track{height:78px;margin:0 16px 0 12px}
   .track.ticks{height:20px}
-  .mark{top:31px}.mark.lane1{top:47px}.link{top:31px}
+  .mark{top:31px}.mark.lane1{top:47px}.mark.lane2{top:63px}.link{top:31px}
 }
 
 /* route tables */
