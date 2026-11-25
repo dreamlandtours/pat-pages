@@ -189,3 +189,44 @@ dialog.lb{border:0;padding:0;background:#1B1610;max-width:min(96vw,1400px);max-h
 dialog.lb::backdrop{background:rgba(20,12,8,.86)}
 dialog.lb img{display:block;max-width:100%;max-height:94vh;width:auto;height:auto}
 dialog.lb .lb-x{position:absolute;right:8px;top:8px;background:var(--panel);color:var(--ink);border:0;font:700 .86rem/1 Lato,sans-serif;text-transform:uppercase;padding:12px 14px;cursor:pointer}
+
+/* hero with people in it: the title never sits on faces.
+   .right = people stand on the left, the title sits in a column at the bottom right.  .below = the title goes in a band under the photo. */
+.ribbon a{color:#fff;margin-left:6px}
+.hero.right{min-height:clamp(420px,min(40vw,70vh),680px)}
+.hero.right .hero-img{object-position:0% 15%}
+.hero.right::after{background:linear-gradient(100deg,rgba(20,12,8,0) 50%,rgba(20,12,8,.8) 100%),linear-gradient(180deg,rgba(20,12,8,0) 62%,rgba(20,12,8,.5) 100%)}
+.hero.right .hero-inner{display:block;max-width:none;padding-left:max(59vw,calc(50vw + 90px))}
+.hero.right .hero-inner>*{max-width:440px}
+.hero.right h1{max-width:none}
+.hero.below{display:block;min-height:0;background:#1B1610}
+.hero.below .hero-img{position:static;display:block;width:100%;height:auto;aspect-ratio:2.4/1;max-height:560px;object-fit:cover;object-position:50% 40%}
+.hero.below::after{display:none}
+.hero.below .hero-inner{padding:20px 20px 24px}
+.hero.below h1{max-width:none}
+@media(max-width:900px){
+  .hero,.hero.right{display:block;min-height:0;background:#1B1610}
+  .hero .hero-img,.hero.right .hero-img,.hero.below .hero-img{position:static;display:block;width:100%;height:auto;aspect-ratio:4/3;max-height:none;object-fit:cover}
+  .hero.right .hero-img{object-position:6% 50%}
+  .hero::after,.hero.right::after{display:none}
+  .hero .hero-inner,.hero.right .hero-inner{display:block;padding:18px 18px 22px}
+  .hero.right .hero-inner>*{max-width:none}
+  .hero h1{max-width:none}
+}
+.split#days .side{top:96px}
+
+/* day list: days in town (green) and days on the trail (red) are different kinds of day */
+.daykey{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0 0 10px;font:700 .76rem/1.3 Lato,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+.daykey span::before{content:"";display:inline-block;width:12px;height:12px;margin-right:7px;vertical-align:-1px;background:var(--red)}
+.daykey .t::before{background:var(--green)}
+.days li{padding-left:14px;border-left:6px solid var(--red)}
+.days li.town{border-left-color:var(--green);background:var(--panel)}
+.days li.town .d{color:var(--green)}
+
+/* maps: regional beside a short text, then the route map full width */
+.where{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:36px;align-items:center}
+.map{margin:0}
+.map img{display:block;width:100%;height:auto;border:1px solid var(--tan);background:var(--panel)}
+.map.route{margin-top:26px}
+.map figcaption,.side figcaption{font-size:.84rem;line-height:1.4;color:var(--grey);margin-top:7px}
+@media(max-width:900px){.where{grid-template-columns:minmax(0,1fr);gap:16px}.map.route{margin-top:16px}}
