@@ -9,8 +9,8 @@ Peekaboo and Spooky are two slot canyons at Dry Fork, down Hole-in-the-Rock Road
 ## Facts
 - Distance: 4 to 6 miles
 - The day: About 6 hours
-- Underfoot: Sand, slickrock and tight slots
-- Tight spots: Spooky is a squeeze. Ask us if that worries you
+- Underfoot: Sand, slickrock and tight slots, with a 12-foot scramble into Peekaboo
+- Tight spots: Spooky narrows to about 10 inches. Ask us if that worries you.
 - Starts in: Escalante, Utah
 - Group: Ten guests at most, with two guides
 - Kind of day: A lighter day. Still physical.
@@ -23,7 +23,7 @@ Peekaboo and Spooky are two slot canyons at Dry Fork, down Hole-in-the-Rock Road
 
 ## Who it suits
 - It's not as tough as our three big Escalante days, but it's more demanding than most of what we guide around Kanab.
-- Slot canyons mean scrambling and tight squeezes. If small spaces aren't your thing, tell us before you book.
+- Getting into Peekaboo takes a scramble of about 12 feet, with a hand from your guide, and Spooky narrows to about 10 inches. If small spaces aren't your thing, tell us before you book.
 - Slots are the first thing we change when rain is in the forecast.
 
 ## What to bring
@@ -35,11 +35,11 @@ Peekaboo and Spooky are two slot canyons at Dry Fork, down Hole-in-the-Rock Road
 ## Questions
 **Is this the same Peekaboo as your Kanab tour?** No. There are two Peekaboo slot canyons in southern Utah. Our half-day Peekaboo tour is the one near Kanab. This page is about the one at Dry Fork, near Escalante, which is a bigger and more physical day.
 
-**How tight is Spooky?** Tight. If you're unsure about small spaces, call us before you book and we'll tell you straight whether it's for you.
+**How tight is Spooky?** About 10 inches wide at its narrowest. If you're unsure about small spaces, call us before you book and we'll tell you straight whether it's for you.
 
 **What happens in bad weather?** Slot canyons, the river and the dirt roads all answer to the weather, and we make the weather calls. If conditions aren't safe, your guides will change the plan and find you something just as good. A change of plan for weather or safety isn't a reason for a refund. If we cancel your day, you get a full refund.
 
-**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch, or ask us about adding one of ours.
+**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch.
 
 **How do I get to Escalante, and where do I stay?** Escalante is a small town on Scenic Byway 12 in southern Utah, and you'll need a car to reach it. The nearest big airports are Las Vegas and Salt Lake City. By road it's about 315 miles from Las Vegas, 285 from Salt Lake City and 270 from Grand Junction, each four and a half to five hours of driving, and 120 miles from Kanab, about two and a half hours. Every hike starts and finishes in town. Lodging isn't part of our price. You book your own place to stay: there are lodges, motels, cabins and campgrounds in and around Escalante, and they fill up in spring and fall.
 

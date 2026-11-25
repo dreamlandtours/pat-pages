@@ -25,7 +25,7 @@ Jacob Hamblin Arch is a guided day hike into Coyote Gulch, a side canyon of the 
 - Twelve miles round trip on hardy terrain. This is the longest walk of our five Escalante days.
 - The route is non-technical: no ropes and no climbing.
 - In the gulch itself, expect to walk in the creek. Your shoes will get wet.
-- It's also the longest drive of the five days.
+- The trailhead is about 75 minutes from Escalante.
 
 ## What to bring
 - Shoes that can get wet
@@ -42,7 +42,7 @@ Jacob Hamblin Arch is a guided day hike into Coyote Gulch, a side canyon of the 
 
 **What happens in bad weather?** Slot canyons, the river and the dirt roads all answer to the weather, and we make the weather calls. If conditions aren't safe, your guides will change the plan and find you something just as good. A change of plan for weather or safety isn't a reason for a refund. If we cancel your day, you get a full refund.
 
-**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch, or ask us about adding one of ours.
+**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch.
 
 **How do I get to Escalante, and where do I stay?** Escalante is a small town on Scenic Byway 12 in southern Utah, and you'll need a car to reach it. The nearest big airports are Las Vegas and Salt Lake City. By road it's about 315 miles from Las Vegas, 285 from Salt Lake City and 270 from Grand Junction, each four and a half to five hours of driving, and 120 miles from Kanab, about two and a half hours. Every hike starts and finishes in town. Lodging isn't part of our price. You book your own place to stay: there are lodges, motels, cabins and campgrounds in and around Escalante, and they fill up in spring and fall.
 

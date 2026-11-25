@@ -13,7 +13,7 @@ The Golden Cathedral is a guided day hike in the Escalante canyons of southern U
 - The river: One wade each way, ankle to thigh deep, and cold
 - Starts in: Escalante, Utah
 - Group: Ten guests at most, with two guides
-- Kind of day: Strenuous. The toughest of our Escalante days.
+- Kind of day: Strenuous. One of our toughest Escalante days.
 
 ## Price
 - One day on the Escalante Extravaganza: $299 per person
@@ -32,7 +32,6 @@ The Golden Cathedral is a guided day hike in the Escalante canyons of southern U
 - Shoes or boots you don't mind soaking, plus dry socks for after
 - Layers. Mornings can be near freezing in early spring and late fall, and the river is cold.
 - A daypack, and a dry bag for your camera or phone on the crossings
-- Trekking poles. They help on the crossings and on the slickrock
 - Your lunch
 
 ## Questions
@@ -40,7 +39,7 @@ The Golden Cathedral is a guided day hike in the Escalante canyons of southern U
 
 **Do I need ropes or canyoneering skills?** No. The deep water at the Cathedral is where canyoneers rappel in from above. Coming in on foot the way we do, you walk the canyon floor to the pool at the base of the alcove.
 
-**How hard is the Golden Cathedral hike?** It's strenuous: about 10 miles, a steep slickrock descent and climb, a cold river wade each way, and a 10 to 12 hour day from Escalante. It's the toughest of our five Escalante days, a notch harder than the Cosmic Ashtray.
+**How hard is the Golden Cathedral hike?** It's strenuous: about 10 miles, a steep slickrock descent and climb, a cold river wade each way, and a 10 to 12 hour day from Escalante. It's one of our toughest Escalante days, a notch harder than the Cosmic Ashtray.
 
 **When is the light best in the Golden Cathedral?** The alcove glows when late-morning and midday light bounces off the pool, and that's when we're there. Bring a way to keep your camera dry on the crossings.
 
@@ -50,7 +49,7 @@ The Golden Cathedral is a guided day hike in the Escalante canyons of southern U
 
 **What happens in bad weather?** Slot canyons, the river and the dirt roads all answer to the weather, and we make the weather calls. If conditions aren't safe, your guides will change the plan and find you something just as good. A change of plan for weather or safety isn't a reason for a refund. If we cancel your day, you get a full refund.
 
-**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch, or ask us about adding one of ours.
+**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch.
 
 **How do I get to Escalante, and where do I stay?** Escalante is a small town on Scenic Byway 12 in southern Utah, and you'll need a car to reach it. The nearest big airports are Las Vegas and Salt Lake City. By road it's about 315 miles from Las Vegas, 285 from Salt Lake City and 270 from Grand Junction, each four and a half to five hours of driving, and 120 miles from Kanab, about two and a half hours. Every hike starts and finishes in town. Lodging isn't part of our price. You book your own place to stay: there are lodges, motels, cabins and campgrounds in and around Escalante, and they fill up in spring and fall.
 

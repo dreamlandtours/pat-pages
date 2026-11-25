@@ -10,7 +10,7 @@ Zebra and Tunnel are two slot canyons near Escalante in southern Utah. Our guide
 - Distance: 7 miles
 - The day: About 6 hours
 - Underfoot: Sand, slickrock and narrow slots
-- Water: The slots can hold water. Expect wet feet, or more
+- Water: The slots often hold water. Expect wet feet, sometimes waist deep or more, and cold.
 - Starts in: Escalante, Utah
 - Group: Ten guests at most, with two guides
 - Kind of day: A lighter day. Still physical.
@@ -33,11 +33,11 @@ Zebra and Tunnel are two slot canyons near Escalante in southern Utah. Our guide
 - Your lunch
 
 ## Questions
-**Is there water in Zebra Slot?** Often. How much changes with the season and the last rain, and your guides check before the day.
+**Is there water in Zebra Slot?** Often. Expect wet feet, and sometimes wading waist deep or more in cold water. How much there is changes with the season and the last rain, and your guides check before the day.
 
 **What happens in bad weather?** Slot canyons, the river and the dirt roads all answer to the weather, and we make the weather calls. If conditions aren't safe, your guides will change the plan and find you something just as good. A change of plan for weather or safety isn't a reason for a refund. If we cancel your day, you get a full refund.
 
-**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch, or ask us about adding one of ours.
+**Is lunch included?** No. Snacks and plenty of water are on us. Bring your own lunch.
 
 **How do I get to Escalante, and where do I stay?** Escalante is a small town on Scenic Byway 12 in southern Utah, and you'll need a car to reach it. The nearest big airports are Las Vegas and Salt Lake City. By road it's about 315 miles from Las Vegas, 285 from Salt Lake City and 270 from Grand Junction, each four and a half to five hours of driving, and 120 miles from Kanab, about two and a half hours. Every hike starts and finishes in town. Lodging isn't part of our price. You book your own place to stay: there are lodges, motels, cabins and campgrounds in and around Escalante, and they fill up in spring and fall.
 
