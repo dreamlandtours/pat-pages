@@ -20,7 +20,8 @@
 
 /* top block: answer on the left, fact sheet and booking on the right */
 .top{max-width:1100px;margin:0 auto;padding:36px 20px 8px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:start}
-.answer{font-size:1.24rem;line-height:1.55;margin:0 0 18px}
+.lead{font-size:1.24rem;line-height:1.55;margin:0 0 16px}
+.answer{margin:0 0 18px;padding:12px 16px;background:var(--panel);border-left:5px solid var(--tan)}
 .card{background:var(--panel);border-top:5px solid var(--red);padding:20px 22px 22px;box-shadow:0 6px 18px rgba(31,31,31,.10)}
 .price{font:700 2.9rem/1 var(--display);margin:0}
 .price small{font:400 1rem/1.3 Lato,sans-serif;color:var(--grey);display:block;margin-top:6px}
@@ -238,3 +239,25 @@ dialog.lb .lb-x{position:absolute;right:8px;top:8px;background:var(--panel);colo
 .level i{color:rgba(255,255,255,.82);border-left:1px solid rgba(255,255,255,.55)}
 .level i::before{content:attr(data-t)}
 @media(max-width:420px){.level{font-size:.68rem;letter-spacing:.06em}.level b,.level i{padding:8px 9px}}
+
+/* dates: the trail dates lead, travel days are fine print */
+.tbl.dates td.when b{display:block;font:700 1.7rem/1.1 var(--display);letter-spacing:.2px;color:var(--ink)}
+.tbl.dates td.when small,.tbl.dates td.who small{display:block;font-size:.86rem;line-height:1.4;color:var(--grey);margin-top:4px}
+.tbl.dates td.who{white-space:nowrap}
+@media(max-width:620px){
+  .tbl.dates thead{position:absolute;left:-9999px}
+  .tbl.dates tr{display:block;padding:14px 12px;border-bottom:1px solid var(--line)}
+  .tbl.dates td{display:block;padding:0;border:0}
+  .tbl.dates td.who{margin-top:8px;white-space:normal}
+  .tbl.dates td.who small{display:inline;margin-left:8px}
+  .tbl.dates td.act{margin-top:10px}
+}
+/* why we cost more */
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:6px 0 20px}
+.why>div{background:var(--panel);border-top:2px solid var(--tan);padding:16px 18px 6px}
+.why h4{font:700 1.4rem/1.15 var(--display);letter-spacing:.2px;margin:0 0 6px;color:var(--ink)}
+.why p{font-size:.98rem;line-height:1.5;margin:0 0 10px}
+@media(max-width:900px){.why{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.why{grid-template-columns:minmax(0,1fr)}}
+
+.proof .what.quote{font:700 1.35rem/1.2 var(--display);letter-spacing:.2px}
