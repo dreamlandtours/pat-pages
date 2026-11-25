@@ -262,3 +262,4 @@ dialog.lb .lb-x{position:absolute;right:8px;top:8px;background:var(--panel);colo
 
 .proof .what.quote{font:700 1.35rem/1.2 var(--display);letter-spacing:.2px}
 
+.proof .ctx{display:block;font-size:.88rem;line-height:1.4;color:var(--grey);margin:4px 0 6px}
