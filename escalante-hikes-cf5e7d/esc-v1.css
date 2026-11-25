@@ -91,3 +91,10 @@ figure figcaption{font-size:.88rem;color:var(--grey);margin-top:6px}
     background-position:center;background-size:cover;background-repeat:no-repeat;filter:blur(26px) brightness(.82) saturate(1.05);clip-path:inset(60px)}
   .hero.below.tall .hero-inner{position:relative;z-index:1}
 }
+
+/* preview only: numbered open-question marks and the list they point to */
+a.ph-mark{text-decoration:none;font-size:.86em;white-space:nowrap;padding:0 1px}
+a.ph-mark:hover,a.ph-mark:focus{text-decoration:underline}
+.oq{margin:10px 0 0;padding-left:26px}
+.oq li{margin:0 0 8px;max-width:72ch;scroll-margin-top:110px}
+.oq li:target{background:#f3e9dd;outline:6px solid #f3e9dd}
