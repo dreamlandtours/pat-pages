@@ -1,0 +1,163 @@
+/* "What a guided desert backpacking trip costs": page styles.
+   Loaded after ../shell/shell.css, which supplies fonts, colour tokens, the site header, .wrap, .narrow, h2, .btn and the footer.
+   Dreamland kit only: canyon red, ink, grey, cream, panel, tan, green, border. No dark mode.
+   Chart marks differ by shape and fill as well as colour, so they survive greyscale and printing.
+   When this file and the page text change together, save it under a new name (prices-v2.css) and keep this one. */
+
+/* hero: one real Dreamland photo, title bottom-left on a dark gradient */
+.phero{position:relative;min-height:min(52vh,460px);display:flex;align-items:flex-end;color:#fff;
+  background:#4a3a30 url(img/hero-coyote-gulch.jpg) 50% 62%/cover no-repeat}
+.phero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,12,8,.05) 20%,rgba(20,12,8,.82) 100%)}
+.phero-inner{position:relative;max-width:1100px;width:100%;margin:0 auto;padding:0 20px 44px}
+.eyebrow{margin:0 0 8px;font:700 .82rem/1 Lato,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.phero h1{font:700 clamp(2.6rem,6.2vw,4.6rem)/1 var(--display);text-shadow:0 2px 18px rgba(0,0,0,.45);max-width:17ch}
+.phero .lede{font-size:1.2rem;line-height:1.5;max-width:50ch;margin:14px 0 0;text-shadow:0 1px 8px rgba(0,0,0,.65)}
+.credit{position:absolute;right:14px;bottom:10px;margin:0;font-size:.78rem;opacity:.85}
+@media(max-width:620px){.phero{min-height:400px}.phero-inner{padding:0 18px 42px}.phero .lede{font-size:1.08rem}.credit{left:18px;right:auto}}
+
+/* preview note: shown only while data.PREVIEW is True */
+.previewnote{background:var(--panel);border-bottom:1px solid var(--tan)}
+.previewnote div{max-width:1080px;margin:0 auto;padding:16px 20px;border-left:5px solid var(--red)}
+.previewnote p{margin:0 0 6px}
+.previewnote ol{margin:0;padding-left:22px;font-size:.98rem}
+
+/* text blocks */
+h3{font:700 1.9rem/1.1 var(--display);color:var(--ink)}
+.lead{padding-bottom:22px}
+.lead p{font-size:1.12rem}
+.readline{color:var(--grey);font-size:1rem !important}
+.sub{margin:-4px 0 18px;color:var(--grey);max-width:70ch}
+.pnote{font-size:.92rem;color:var(--grey);margin:10px 0 0;max-width:86ch}
+.pnote a{color:var(--red)}
+.narrowtext{max-width:720px;margin-top:22px}
+.list{margin:0 0 22px;padding:0;list-style:none}
+.list li{position:relative;padding:0 0 9px 22px}
+.list li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;background:var(--red)}
+
+/* swatches: the same marks the chart uses */
+.sw{flex:none;display:inline-block;box-sizing:border-box;width:13px;height:13px}
+.sw.full{background:var(--grey)}
+.sw.group{background:var(--panel);border:2px solid var(--grey)}
+.sw.tc{border:1.5px solid var(--grey);background:repeating-linear-gradient(45deg,var(--grey) 0 2px,var(--panel) 2px 4.5px)}
+.sw.dl{width:15px;height:15px;border-radius:50%;background:var(--red)}
+.sw.dlpkg{width:15px;height:15px;border-radius:50%;background:var(--panel);border:2.5px solid var(--red)}
+
+/* three kinds of guided trip */
+.kindsec{padding-top:10px;padding-bottom:30px}
+.kinds{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.kind{background:var(--panel);padding:22px 22px 14px;border-top:4px solid var(--tan)}
+.kind .sw{margin-bottom:10px}
+.kind h3{margin-bottom:8px}
+.kind p{font-size:1rem}
+.kind .who{color:var(--grey);font-size:.95rem}
+@media(max-width:860px){.kinds{grid-template-columns:1fr;gap:14px}}
+
+/* chart card */
+.card{max-width:1080px;margin:0 auto 34px;background:var(--panel);padding:30px 34px 26px;width:calc(100% - 40px)}
+.legend{list-style:none;margin:0 0 6px;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.92rem}
+.legend li{display:flex;align-items:center;gap:8px}
+.pchart{position:relative;margin:14px 0 4px}
+.crow{display:grid;grid-template-columns:232px 1fr;align-items:center;column-gap:18px}
+.rows .crow{border-top:1px solid var(--line)}
+.rows .crow:last-child{border-bottom:1px solid var(--line)}
+.clabel a{display:block;font-weight:700;color:var(--ink);text-decoration:none;line-height:1.2}
+.clabel a:hover{color:var(--red)}
+.clabel span{display:block;font-size:.8rem;color:var(--grey)}
+.track{position:relative;height:68px;margin:0 22px 0 14px}
+.track i{position:absolute;top:0;bottom:0;width:1px;background:#e7e2d4}
+.track.ticks{height:22px}
+.ticks span{position:absolute;top:0;transform:translateX(-50%);font-size:.8rem;color:var(--grey);font-variant-numeric:tabular-nums}
+.mark{position:absolute;top:33px;width:28px;height:28px;margin:-14px 0 0 -14px;padding:0;border:0;background:none;cursor:pointer;border-radius:50%;-webkit-tap-highlight-color:transparent}
+.mark.lane1{top:49px}
+.mark::before{content:"";position:absolute;left:50%;top:50%;box-sizing:border-box;width:11px;height:11px;margin:-5.5px 0 0 -5.5px;box-shadow:0 0 0 2px var(--panel)}
+.mark.full::before{background:var(--grey)}
+.mark.group::before{background:var(--panel);border:2px solid var(--grey)}
+.mark.tc::before{border:1.5px solid var(--grey);background:repeating-linear-gradient(45deg,var(--grey) 0 2px,var(--panel) 2px 4.5px)}
+.mark.dl::before{width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--red)}
+.mark.dlpkg::before{width:15px;height:15px;margin:-7.5px 0 0 -7.5px;border-radius:50%;background:var(--panel);border:2.5px solid var(--red)}
+.mark:hover::before,.mark.on::before,.mark:focus-visible::before{box-shadow:0 0 0 2px var(--panel),0 0 0 4px var(--ink)}
+.mark:focus-visible{outline:none}
+.link{position:absolute;top:33px;height:2px;margin-top:-1px;background:var(--red)}
+.val{position:absolute;left:50%;top:-9px;transform:translateX(-50%);font:700 .82rem/1 Lato,sans-serif;color:var(--ink);white-space:nowrap;pointer-events:none}
+.tip{position:absolute;z-index:6;width:max-content;max-width:min(290px,100%);background:#1B1610;color:#fff;padding:10px 13px 11px;font-size:.86rem;line-height:1.4;box-shadow:0 6px 18px rgba(31,31,31,.3);pointer-events:none}
+.tip[hidden]{display:none}
+.tip strong{display:block;font-size:1.05rem}
+.tip .n{display:block;font-weight:700}
+.tip .d{display:block;opacity:.9}
+@media(max-width:760px){
+  .card{padding:22px 16px 20px;width:calc(100% - 28px)}
+  .crow{grid-template-columns:1fr}
+  .rows .crow{padding-top:10px}
+  .axis .clabel{display:none}
+  .clabel a,.clabel span{display:inline}
+  .clabel span::before{content:" \00b7  "}
+  .track{height:64px;margin:0 16px 0 12px}
+  .track.ticks{height:20px}
+  .mark{top:31px}.mark.lane1{top:47px}.link{top:31px}
+}
+
+/* route tables */
+.routes{padding-top:20px}
+.route{background:var(--panel);padding:26px 26px 22px;margin:0 0 26px;scroll-margin-top:96px}
+.route h3{color:var(--green);font-size:2.1rem}
+.area{margin:2px 0 14px;font:700 .8rem/1.3 Lato,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--grey)}
+.closure{margin:0 0 16px;padding:12px 16px;background:var(--cream);border-left:5px solid var(--red);font-size:.98rem}
+.tw{overflow-x:auto}
+.ptable{width:100%;border-collapse:collapse;font-size:.92rem;line-height:1.4}
+.ptable th,.ptable td{padding:10px 10px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+.ptable thead th{font:700 .74rem/1.25 Lato,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--green);border-bottom:2px solid var(--tan);vertical-align:bottom}
+.ptable .num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ptable tbody th{font-weight:400;min-width:150px}
+.ptable .who{display:block;font-weight:700}
+.ptable .trip{display:block;color:var(--grey)}
+.ptable .extra{display:block;font-size:.8rem}
+.ptable .day{font-weight:700;font-size:1.02rem}
+.ptable .read{display:block;font-size:.76rem;color:var(--grey);white-space:normal;max-width:24ch;margin-left:auto;line-height:1.3}
+.ptable thead th:nth-child(2){min-width:136px}
+.ptable .tcflag{color:var(--red);font-weight:700}
+.ptable tr.us{background:rgba(151,26,32,.07)}
+.ptable tr.us th{box-shadow:inset 4px 0 0 var(--red)}
+.ptable tr.us .who{color:var(--red)}
+.ptable sup a{text-decoration:none;padding:0 2px}
+.sum tbody th{font-weight:700}
+.sum tbody th a{color:var(--ink)}
+@media(max-width:860px){
+  .route{padding:20px 14px 16px;margin-bottom:20px}
+  .ptable thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .ptable,.ptable tbody{display:block}
+  .ptable tr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 10px;padding:14px 12px;margin:0 0 10px;background:var(--cream);border:1px solid var(--line)}
+  .ptable tr.us{background:rgba(151,26,32,.07)}
+  .ptable th,.ptable td{display:block;padding:0;border:0}
+  .ptable tbody th{grid-column:1 / -1;min-width:0;padding-left:0}
+  .ptable tr.us th{box-shadow:none}
+  .ptable .who{font-size:1.05rem}
+  .ptable td.num{text-align:left;white-space:normal}
+  .ptable td.num::before{content:attr(data-label);display:block;font:700 .68rem/1.3 Lato,sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--green)}
+  .ptable .read{margin-left:0;max-width:none}
+  .ptable td:not(.num){grid-column:1 / -1;font-size:.92rem}
+  .ptable td:not(.num)::before{content:attr(data-label) ": ";font-weight:700}
+  .ptable td[colspan]::before{content:""}
+  .sum tr{grid-template-columns:1fr auto}
+  .sum tbody th{grid-column:1;font-size:1.05rem}
+  .sum td.num{grid-column:2;text-align:right}
+  .sum td.num::before{text-align:right}
+}
+
+/* Dreamland band and method */
+.band{background:var(--tan);margin-top:10px}
+.band h2{color:var(--ink)}
+.band .list li::before{background:var(--red)}
+.links-row{margin:22px 0 0}
+.method h3{margin:26px 0 10px}
+.rules{margin:0 0 6px;padding:0;list-style:none;counter-reset:r;border-top:2px solid var(--tan)}
+.rules li{counter-increment:r;position:relative;padding:12px 0 12px 46px;border-bottom:1px solid var(--tan)}
+.rules li::before{content:counter(r);position:absolute;left:4px;top:8px;font:700 2.1rem/1 var(--display);color:var(--red)}
+.fix{margin-top:26px;padding:20px 22px;background:var(--panel);border-left:5px solid var(--green)}
+.fix h3{margin:0 0 8px}
+.fix p{margin:0}
+.sumsec{padding-top:20px}
+
+/* jump list above the route tables */
+.jump{list-style:none;margin:0 0 22px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.jump a{display:block;padding:7px 12px;background:var(--panel);border:1px solid var(--tan);color:var(--ink);text-decoration:none;font-size:.92rem;font-weight:700}
+.jump a:hover{border-color:var(--red);color:var(--red)}
