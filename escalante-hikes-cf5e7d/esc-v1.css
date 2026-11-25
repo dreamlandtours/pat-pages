@@ -80,5 +80,14 @@ figure figcaption{font-size:.88rem;color:var(--grey);margin-top:6px}
 .gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
 @media(max-width:700px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
+
+.hero-bg{display:none}
 /* a hero that needs its height (the Cathedral's roof and the person below it): narrower than the page, taller than the wide crop */
-@media(min-width:621px){.hero.below.tall .hero-img{width:min(100%,1040px);margin:0 auto;aspect-ratio:16/10;max-height:none}}
+@media(min-width:621px){
+  .hero.below.tall{position:relative;overflow:hidden}
+  .hero.below.tall .hero-img{position:relative;z-index:1;width:min(100%,1040px);margin:0 auto;aspect-ratio:16/10;max-height:none}
+  /* the space beside the photo shows a blurred, enlarged copy of the same photo (the .hero-bg element); nothing is generated or retouched */
+  .hero.below.tall .hero-bg{display:block;position:absolute;left:-60px;right:-60px;top:-60px;height:calc(min(100vw,1040px)*.625 + 120px);
+    background-position:center;background-size:cover;background-repeat:no-repeat;filter:blur(26px) brightness(.82) saturate(1.05);clip-path:inset(60px)}
+  .hero.below.tall .hero-inner{position:relative;z-index:1}
+}
