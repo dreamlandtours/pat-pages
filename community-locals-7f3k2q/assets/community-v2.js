@@ -130,6 +130,7 @@
     });
     document.addEventListener('keydown', function (e) {
       if (!zv.hidden) { if (e.key === 'Escape') closeZoom(); return; }
+      if (document.querySelector('.cert:not([hidden])')) return;
       if (!inView && document.activeElement !== gz) return;
       if (e.target && /INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
       if (e.key === 'ArrowRight') { go(1); e.preventDefault(); }
@@ -161,10 +162,31 @@
     } else start();
   })();
 
-  /* ---------- Book buttons ---------- */
-  Array.prototype.forEach.call(document.querySelectorAll('a.date'), function (a) {
-    a.addEventListener('click', function () { track('locals_sunday_book', { date: a.querySelector('b').textContent }); });
-  });
+  /* ---------- Book buttons: Kane County self-certification before Peek ---------- */
+  var cert = document.querySelector('.cert');
+  if (cert) (function () {
+    var box = cert.querySelector('#certBox'), go = cert.querySelector('.cert-go'), dateP = cert.querySelector('.cert-date');
+    var lastFocus = null, chosen = '';
+    function sync() { go.setAttribute('aria-disabled', box.checked ? 'false' : 'true'); }
+    function open(date) {
+      chosen = date; lastFocus = document.activeElement;
+      dateP.textContent = date ? 'Sunday, ' + date + ' at 2 PM. Pick this date on the next screen.' : '';
+      box.checked = false; sync(); cert.hidden = false; document.body.style.overflow = 'hidden'; box.focus();
+      track('locals_sunday_book_click', { date: date });
+    }
+    function close() { cert.hidden = true; document.body.style.overflow = ''; if (lastFocus) lastFocus.focus(); }
+    Array.prototype.forEach.call(document.querySelectorAll('a.date'), function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); open(a.querySelector('b').textContent); });
+    });
+    box.addEventListener('change', sync);
+    go.addEventListener('click', function (e) {
+      if (!box.checked) { e.preventDefault(); box.focus(); return; }
+      track('locals_sunday_certified', { date: chosen });
+    });
+    cert.querySelector('.cert-x').addEventListener('click', close);
+    cert.addEventListener('click', function (e) { if (e.target === cert) close(); });
+    document.addEventListener('keydown', function (e) { if (!cert.hidden && e.key === 'Escape') close(); });
+  })();
 
   /* ---------- Kit signup (tag dl-community-locals) ---------- */
   var form = document.querySelector('form.signup');

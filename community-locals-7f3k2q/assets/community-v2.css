@@ -135,3 +135,31 @@ footer .fname{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:700;font-si
   .gz-jump span{display:none}
 }
 @media (prefers-reduced-motion:reduce){.gz-leaf{transition:none}.gz-book{transition:none}html{scroll-behavior:auto}}
+
+/* v2: facts list, map, FAQ, self-certification pop-up */
+.lead-in{font-size:18px;margin:0 0 18px;color:#3c342c}
+.facts{list-style:none;padding:0;margin:18px 0 20px;display:grid;gap:10px}
+.facts li{background:#fff;border:1px solid var(--border);border-left:4px solid var(--red);border-radius:8px;padding:12px 16px;font-size:15.5px;line-height:1.5}
+.facts li b{display:block;font-family:'Yanone Kaffeesatz',sans-serif;font-weight:700;font-size:20px;color:var(--ink);letter-spacing:.3px;margin-bottom:2px}
+.map-split{grid-template-columns:1.2fr .8fr}
+.map{margin:0}
+.map img{width:100%;height:auto;border-radius:12px;border:1px solid var(--border);box-shadow:0 12px 30px rgba(38,33,28,.14)}
+.wrap.narrow-left{max-width:820px}
+.faq-sec details{background:#fff;border:1px solid var(--border);border-radius:10px;margin:0 0 10px;padding:0 18px}
+.faq-sec summary{cursor:pointer;list-style:none;padding:15px 30px 15px 0;font-weight:700;font-size:17px;position:relative}
+.faq-sec summary::-webkit-details-marker{display:none}
+.faq-sec summary::after{content:"+";position:absolute;right:0;top:9px;font:700 28px/1 'Yanone Kaffeesatz',sans-serif;color:var(--red)}
+.faq-sec details[open] summary::after{content:"\2013"}
+.faq-sec details p{margin:0 0 16px;font-size:16px}
+.cert{position:fixed;inset:0;z-index:10001;display:flex;align-items:center;justify-content:center;background:rgba(27,22,16,.72);padding:18px}
+.cert[hidden]{display:none}
+.cert-panel{position:relative;width:min(540px,100%);max-height:calc(100vh - 36px);overflow:auto;background:#fff;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.45);padding:26px 26px 24px}
+.cert-panel h3{font-size:32px;color:var(--red);margin:0 34px 4px 0}
+.cert-date{margin:0 0 16px;font-weight:700;color:var(--green)}
+.cert-x{position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;border-radius:50%;background:var(--cream);color:var(--ink);font-size:24px;line-height:36px;cursor:pointer}
+.cert-check{display:flex;gap:12px;align-items:flex-start;background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:14px;cursor:pointer;font-size:16px;line-height:1.5}
+.cert-check input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--red)}
+.cert-note{font-size:14.5px;color:#5a5148;margin:14px 0 18px}
+.cert-go{width:100%;text-align:center}
+.cert-go[aria-disabled="true"]{opacity:.4;cursor:not-allowed}
+@media (max-width:900px){.map-split{grid-template-columns:1fr}.map-split .map{order:2}}
