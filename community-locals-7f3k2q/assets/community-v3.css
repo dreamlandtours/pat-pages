@@ -163,3 +163,20 @@ footer .fname{font-family:'Yanone Kaffeesatz',sans-serif;font-weight:700;font-si
 .cert-go{width:100%;text-align:center}
 .cert-go[aria-disabled="true"]{opacity:.4;cursor:not-allowed}
 @media (max-width:900px){.map-split{grid-template-columns:1fr}.map-split .map{order:2}}
+
+/* v3: map shown whole + full-size overlay, story, timeline, family card */
+.split figure.map img{max-height:none;object-fit:contain;cursor:zoom-in}
+.mapview{position:fixed;inset:0;z-index:10000;background:rgba(27,22,16,.94);overflow:auto;-webkit-overflow-scrolling:touch;padding:56px 12px 24px;text-align:center}
+.mapview[hidden]{display:none}
+.mapview img{display:inline-block;width:auto;height:auto;max-width:min(1100px,100%);background:#faf6e8;border-radius:8px}
+.story-split{grid-template-columns:.8fr 1.2fr}
+.owners{margin:0}
+.owners img{width:100%;border-radius:14px;box-shadow:0 14px 34px rgba(38,33,28,.18)}
+.owners figcaption{font-size:12.5px;color:#6b6157;margin-top:8px;text-align:center}
+.years{list-style:none;padding:0;margin:40px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:none}
+.years li{border-top:3px solid var(--red);padding-top:10px;font-size:15px;line-height:1.45}
+.years li b{display:block;font-family:'Yanone Kaffeesatz',sans-serif;font-weight:700;font-size:34px;color:var(--red);line-height:1}
+.family{margin:44px auto 0;max-width:620px;background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:22px 24px;text-align:left}
+.family h3{font-size:27px;color:var(--red);margin-bottom:6px}
+.family p{margin:0 0 14px;font-size:16px}
+@media (max-width:900px){.story-split{grid-template-columns:1fr}.owners{max-width:420px}.years{grid-template-columns:repeat(2,1fr)}}

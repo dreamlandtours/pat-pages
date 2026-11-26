@@ -130,7 +130,7 @@
     });
     document.addEventListener('keydown', function (e) {
       if (!zv.hidden) { if (e.key === 'Escape') closeZoom(); return; }
-      if (document.querySelector('.cert:not([hidden])')) return;
+      if (document.querySelector('.cert:not([hidden]), .mapview:not([hidden])')) return;
       if (!inView && document.activeElement !== gz) return;
       if (e.target && /INPUT|SELECT|TEXTAREA/.test(e.target.tagName)) return;
       if (e.key === 'ArrowRight') { go(1); e.preventDefault(); }
@@ -160,6 +160,22 @@
         es.forEach(function (en) { inView = en.isIntersecting; });
       }, { threshold: 0.45 }).observe(book);
     } else start();
+  })();
+
+  /* ---------- Map: full size in an overlay, closed with the X, Escape or a click outside ---------- */
+  var mapLink = document.querySelector('a.map-open'), mv = document.querySelector('.mapview');
+  if (mapLink && mv) (function () {
+    var mimg = mv.querySelector('img'), back = null;
+    function close() { mv.hidden = true; document.body.style.overflow = ''; if (back) back.focus(); }
+    mapLink.addEventListener('click', function (e) {
+      e.preventDefault(); back = mapLink;
+      if (!mimg.getAttribute('src')) mimg.src = mapLink.getAttribute('href');
+      mv.hidden = false; document.body.style.overflow = 'hidden'; mv.scrollTop = 0;
+      mv.querySelector('.map-close').focus(); track('map_open');
+    });
+    mv.querySelector('.map-close').addEventListener('click', close);
+    mv.addEventListener('click', function (e) { if (e.target === mv) close(); });
+    document.addEventListener('keydown', function (e) { if (!mv.hidden && e.key === 'Escape') close(); });
   })();
 
   /* ---------- Book buttons: Kane County self-certification before Peek ---------- */
