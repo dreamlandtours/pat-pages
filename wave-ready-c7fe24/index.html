@@ -4,17 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>[TEST] Wave Ready: Do You Need a Guide to Hike The Wave?</title>
-<meta name="description" content="A short quiz on whether you need a guide to hike The Wave, from Kanab locals with Dreamland Safari Tours. Get a plan for your month, your car and your group.">
+<meta name="description" content="A short quiz on whether you need a guide to hike The Wave, from Wave guides in Kanab with Dreamland Safari Tours. Get a plan for your month, your car and your group.">
 <meta name="robots" content="noindex,nofollow">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Wave Ready">
 <meta property="og:title" content="Wave Ready: Do you need a guide to hike The Wave?">
-<meta property="og:description" content="A short quiz on whether you need a guide to hike The Wave, from Kanab locals with Dreamland Safari Tours. Get a plan for your month, your car and your group.">
+<meta property="og:description" content="A short quiz on whether you need a guide to hike The Wave, from Wave guides in Kanab with Dreamland Safari Tours. Get a plan for your month, your car and your group.">
 <meta property="og:url" content="https://wave-ready-q7m3k.surge.sh/">
 <meta property="og:image" content="https://wave-ready-q7m3k.surge.sh/img/wave-hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Wave Ready: Do you need a guide to hike The Wave?">
-<meta name="twitter:description" content="A short quiz on whether you need a guide to hike The Wave, from Kanab locals with Dreamland Safari Tours. Get a plan for your month, your car and your group.">
+<meta name="twitter:description" content="A short quiz on whether you need a guide to hike The Wave, from Wave guides in Kanab with Dreamland Safari Tours. Get a plan for your month, your car and your group.">
 
 <script type="application/ld+json">
 {
@@ -25,7 +25,7 @@
    "@id": "https://wave-ready-q7m3k.surge.sh/#site",
    "name": "Wave Ready",
    "url": "https://wave-ready-q7m3k.surge.sh/",
-   "description": "A short quiz on whether you need a guide to hike The Wave, from Kanab locals with Dreamland Safari Tours. Get a plan for your month, your car and your group."
+   "description": "A short quiz on whether you need a guide to hike The Wave, from Wave guides in Kanab with Dreamland Safari Tours. Get a plan for your month, your car and your group."
   },
   {
    "@type": "FAQPage",
@@ -40,10 +40,10 @@
     },
     {
      "@type": "Question",
-     "name": "When does a guide help most?",
+     "name": "How do the permit lotteries work?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "When a few things stack up: shaky route-finding, little experience in desert heat, a summer date, a late start, a car that can't handle a muddy dirt road, small children, or not much time to prepare. One of these you can usually fix before your date. Several at once is when a guide makes the day much easier."
+      "text": "The BLM allows 64 people a day. 48 places go through an online lottery four months ahead, and 16 through a daily lottery you enter on your phone two days ahead while you're near Kanab or Page. Daily winners must accept by 8 AM Utah time the next day and be at the Kanab or Page permit office at 8:30 AM local time for a safety briefing; arriving late voids the permit. Fewer than 1 in 10 applicants win. Entering costs $6, and winners pay $7 per person. Guides enter the same lotteries as everyone else and can't improve your odds, and a guide you hire doesn't count toward your group of six."
      }
     },
     {
@@ -52,14 +52,6 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "The Wave is in Vermilion Cliffs National Monument on the Arizona–Utah border. The trailhead, Wire Pass, is about an hour's drive from Kanab, Utah, and the last 8 miles are on House Rock Valley Road, a dirt road. Kanab and Page are the usual bases. To try the daily lottery, you need to be in the area with your phone two days before you'd hike."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "How do the permit lotteries work?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The BLM allows 64 people a day. 48 places go through an online lottery four months ahead, and 16 through a daily lottery you enter on your phone two days ahead while you're near Kanab or Page. Daily winners must accept by 8 AM Utah time the next day and be at the Kanab or Page permit office at 8:30 AM local time for a safety briefing; arriving late voids the permit. Fewer than 1 in 10 applicants win. Entering costs $6, and winners pay $7 per person. Guides enter the same lotteries as everyone else and can't improve your odds, and a guide you hire doesn't count toward your group of six."
      }
     },
     {
@@ -76,6 +68,14 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Yes. Four people have died in July heat since 2013: a couple aged 70 and 69 in July 2013, a 27-year-old hiker who lost the trail on the walk back that same month, and a 49-year-old hiker in July 2018 who still had water with him. In 2012 a hiker died after falling into a slot canyon after dark. A first-light start, plenty of water, a turnaround time and knowing the route back prevent most of this."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "When does a guide help most?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "When a few things stack up: shaky route-finding, little experience in desert heat, a summer date, a late start, a car that can't handle a muddy dirt road, small children, or not much time to prepare. One of these you can usually fix before your date. Several at once is when a guide makes the day much easier."
      }
     },
     {
@@ -128,20 +128,22 @@ img{max-width:100%;display:block}
 @media(max-width:640px){.byline{display:none}}
 
 /* hero — full-bleed photo */
-.hero{position:relative;min-height:74vh;display:flex;align-items:flex-end;overflow:hidden;background:#3a2418}
-.hero-media,.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero{position:relative;padding:0;min-height:78vh;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);overflow:hidden;background:var(--canyon)}
+.hero-media{position:relative;grid-column:2;grid-row:1;display:block;min-height:100%}
+.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero-scrim{position:absolute;inset:0;background:
-  linear-gradient(75deg,rgba(30,18,10,.82) 0%,rgba(30,18,10,.45) 42%,rgba(30,18,10,.05) 72%),
-  linear-gradient(0deg,rgba(30,18,10,.6),rgba(30,18,10,0) 45%)}
-.hero-inner{position:relative;z-index:2;padding-top:66px;padding-bottom:52px;color:#fbeede;max-width:720px}
+  linear-gradient(180deg,rgba(30,18,10,.74) 0%,rgba(30,18,10,.42) 38%,rgba(30,18,10,0) 62%),
+  linear-gradient(90deg,rgba(30,18,10,.45) 0%,rgba(30,18,10,0) 55%)}
+.hero-inner{position:relative;z-index:2;grid-column:1;grid-row:1;align-self:center;margin:0;padding:48px clamp(22px,4vw,56px);color:#fbeede;max-width:none}
+.hero-scrim{display:none}
 .hero-kick{color:#f0c58a;font-size:.74rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
-.hero h1{color:#fff;font-size:clamp(2.4rem,6.4vw,4.4rem);font-weight:800;margin:.35em 0 .3em;letter-spacing:-.02em}
+.hero h1{color:#fff;font-size:clamp(2.2rem,3.6vw,3.4rem);font-weight:800;margin:.35em 0 .3em;letter-spacing:-.02em}
 .hero .lede{color:#f3e6d6;font-size:clamp(1.05rem,2.3vw,1.28rem);max-width:560px;margin:0 0 1.5em;line-height:1.5}
 .hero-cta{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
 .hero-link{color:#fff;font-weight:600;text-decoration:none;border-bottom:1.5px solid rgba(255,255,255,.5);padding-bottom:2px}
 .hero-credit{position:absolute;right:12px;bottom:8px;z-index:2;font-size:.64rem;letter-spacing:.04em;color:rgba(255,255,255,.62)}
 
-.note{border-left:3px solid var(--terra);background:transparent;padding:6px 0 6px 20px;margin:36px 0 0;max-width:720px}
+.note{border-left:3px solid var(--terra);background:transparent;padding:6px 0 6px 20px;margin:36px 0 0;max-width:none}
 .note h2{font-family:var(--disp);font-size:1.15rem;margin:0 0 .3em;font-weight:700}
 .note p{margin:0;color:var(--ink-2);font-size:1.02rem}
 
@@ -246,7 +248,8 @@ footer .fine2{border-top:1px solid rgba(247,240,225,.14);margin-top:20px;padding
 /* redesign 2026-11-27 */
 .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:12px 0 14px}
 .facts div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px;font-size:.98rem;color:var(--ink)}
-.facts b{display:block;color:var(--terra-d);font-size:.82rem;margin-bottom:2px}
+.facts b{display:block;color:var(--terra-d);font-size:.9rem;margin-bottom:4px}
+.stats{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 10px;margin:0}.stats dt{color:var(--ink-2)}.stats dd{margin:0}
 .note .go{color:var(--ink);margin:0}
 .cont{margin-top:14px}.cont[disabled]{opacity:.45;cursor:not-allowed}
 .permitbox{border:2px solid var(--terra);border-radius:12px;background:#fff;padding:18px 22px;margin:0 0 18px}
@@ -258,12 +261,16 @@ footer .fine2{border-top:1px solid rgba(247,240,225,.14);margin-top:20px;padding
 .guidebox.quiet{border-color:var(--line)}
 .gate .thanks .fine{font-style:normal}
 .gate .err{color:var(--terra-d);font-weight:600;margin:10px 0 0}.gate .err:empty{display:none}
+.facts{grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.25fr)}.stats dd{white-space:normal}
 @media(max-width:680px){.facts{grid-template-columns:minmax(0,1fr)}}
 
 @media(max-width:680px){
  body{font-size:16px}
- .hero{min-height:76vh}
- .hero-inner{padding-top:40px;padding-bottom:40px}
+ .hero{display:block;min-height:0;background:var(--canyon)}
+ .hero-media{position:relative;display:block;height:58vh;min-height:0}
+ .hero-scrim{display:none}
+ .hero-inner{padding-top:22px;padding-bottom:30px}
+ .hero-credit{top:calc(58vh - 20px);bottom:auto}
  .trust-points{grid-template-columns:1fr;gap:18px}
  .scrow{grid-template-columns:104px 1fr 54px;gap:10px;padding:10px 14px}
  .card{padding:24px 18px 20px}
@@ -278,13 +285,13 @@ footer .fine2{border-top:1px solid rgba(247,240,225,.14);margin-top:20px;padding
 
 <header class="site-hd"><div class="wrap">
  <span class="wordmark"><span class="dot"></span>Wave Ready</span>
- <span class="byline">By Kanab locals with Dreamland Safari Tours. Some of Dreamland's guides volunteer<br>on the BLM's Wave safety patrol and with Kane County search and rescue.</span>
+ <span class="byline">By Wave guides who live in Kanab, with Dreamland Safari Tours. Some of our guides volunteer<br>on the BLM's Wave safety patrol and with Kane County search and rescue.</span>
 </div></header>
 
 <section class="hero">
  <picture class="hero-media">
   <source media="(max-width:640px)" srcset="img/wave-hero-sm.jpg">
-  <img src="img/wave-hero.jpg" alt="A hiker in the swirling red-and-cream sandstone of The Wave, Vermilion Cliffs National Monument, Arizona" fetchpriority="high">
+  <img src="img/wave-hero.jpg" style="object-position:50% 72%" alt="A hiker stands in the sandstone bowl of The Wave under a cloudy sky, Vermilion Cliffs National Monument, Arizona" fetchpriority="high">
  </picture>
  <div class="hero-scrim"></div>
  <div class="wrap hero-inner">
@@ -292,17 +299,17 @@ footer .fine2{border-top:1px solid rgba(247,240,225,.14);margin-top:20px;padding
   <h1>Do you need a guide to hike The Wave?</h1>
   <p class="lede">Plenty of people hike The Wave on their own. Some get lost on the bare rock or overheat on the way back.</p>
   <div class="hero-cta">
-   <button class="btn btn-primary btn-lg" onclick="startQuiz()">Start</button>
+   <button class="btn btn-primary btn-lg" onclick="startQuiz()">Take the quiz</button>
    <a class="hero-link" href="#trust">Who made this &darr;</a>
   </div>
  </div>
- <span class="hero-credit">Photo: Dreamland Safari Tours</span>
+ <span class="hero-credit">Photo: Sunny Stroeer</span>
 </section>
 <div class="wrap"><div class="note"><h2>Before you start</h2>
  <div class="facts">
-  <div><b>Where</b>On the Arizona–Utah line, about an hour's drive from Kanab, Utah.</div>
-  <div><b>Permit</b>Everyone needs one, and it's a lottery. Fewer than 1 in 10 applicants win.</div>
-  <div><b>The hike</b>6.4 miles round trip on sand and bare rock, with no trail, no shade and no water.</div>
+  <div><b>Where is The Wave?</b>In Vermilion Cliffs National Monument on the Arizona–Utah border, about an hour's drive from Kanab, Utah. The last 8 miles are a dirt road.</div>
+  <div><b>Permits in brief</b>Everyone needs one. The BLM allows 64 people a day, chosen by two lotteries: one online, four months ahead, and one on your phone two days ahead while you're near Kanab or Page. Fewer than 1 in 10 applicants win.</div>
+  <div><b>Hiking stats</b><dl class="stats"><dt>Distance</dt><dd>6.4 miles round trip</dd><dt>Difficulty</dt><dd>Strenuous, per the BLM</dd><dt>Trail</dt><dd>None for most of the route</dd><dt>Shade and water</dt><dd>None</dd><dt>Footing</dt><dd>Deep sand and sloping sandstone</dd></dl></div>
  </div>
  <p class="go">Answer a dozen short questions, about 3 minutes, to see whether a guide would make your day easier and what to plan for either way.</p></div></div>
 
@@ -319,18 +326,18 @@ footer .fine2{border-top:1px solid rgba(247,240,225,.14);margin-top:20px;padding
 
 <section id="trust"><div class="wrap narrow">
  <h2 class="trust-h">Who made this</h2>
- <p class="trust-lead"><span class="wr">Wave Ready</span> is made by the Kanab locals behind Dreamland Safari Tours, a Kanab tour company, who hike The Wave often. Some of us volunteered on the BLM's Wave safety patrol and with Kane County search and rescue in past years, and some of Dreamland's guides still do both. Dreamland pays for and hosts this site, and every result links to Dreamland's tours.</p>
+ <p class="trust-lead"><span class="wr">Wave Ready</span> is made by Wave guides who live in Kanab and run Dreamland Safari Tours, a Kanab tour company. Some of us volunteered on the BLM's Wave safety patrol and with Kane County search and rescue in past years, and some of Dreamland's guides still do both. Dreamland pays for and hosts this site, and every result links to Dreamland's tours.</p>
 </div></section>
 
 <section style="background:var(--paper-2);border-top:1px solid var(--line)"><div class="wrap narrow">
  <div class="sec-head"><h2>Common questions</h2></div>
  <div class="faq">
   <details><summary>Can you hike The Wave without a guide?<span class="pl"></span></summary><p>Yes. A guide isn't required, and many people hike The Wave on their own every year. Everyone needs a permit. The hike is 6.4 miles round trip, and the BLM rates it strenuous. For most of it there's no marked trail: you find the way by matching the BLM's landmark photos across bare sandstone. There's no shade or water, and cell service is spotty at the trailhead and mostly absent on the route.</p></details>
-  <details><summary>When does a guide help most?<span class="pl"></span></summary><p>When a few things stack up: shaky route-finding, little experience in desert heat, a summer date, a late start, a car that can't handle a muddy dirt road, small children, or not much time to prepare. One of these you can usually fix before your date. Several at once is when a guide makes the day much easier.</p></details>
-  <details><summary>Where is The Wave, and where should I stay?<span class="pl"></span></summary><p>The Wave is in Vermilion Cliffs National Monument on the Arizona–Utah border. The trailhead, Wire Pass, is about an hour's drive from Kanab, Utah, and the last 8 miles are on House Rock Valley Road, a dirt road. Kanab and Page are the usual bases. To try the daily lottery, you need to be in the area with your phone two days before you'd hike.</p></details>
   <details><summary>How do the permit lotteries work?<span class="pl"></span></summary><p>The BLM allows 64 people a day. 48 places go through an online lottery four months ahead, and 16 through a daily lottery you enter on your phone two days ahead while you're near Kanab or Page. Daily winners must accept by 8 AM Utah time the next day and be at the Kanab or Page permit office at 8:30 AM local time for a safety briefing; arriving late voids the permit. Fewer than 1 in 10 applicants win. Entering costs $6, and winners pay $7 per person. Guides enter the same lotteries as everyone else and can't improve your odds, and a guide you hire doesn't count toward your group of six. <a href="https://www.recreation.gov/permits/274309" target="_blank" rel="noopener">Recreation.gov</a> runs both lotteries.</p></details>
+  <details><summary>Where is The Wave, and where should I stay?<span class="pl"></span></summary><p>The Wave is in Vermilion Cliffs National Monument on the Arizona–Utah border. The trailhead, Wire Pass, is about an hour's drive from Kanab, Utah, and the last 8 miles are on House Rock Valley Road, a dirt road. Kanab and Page are the usual bases. To try the daily lottery, you need to be in the area with your phone two days before you'd hike.</p></details>
   <details><summary>Do you need a 4x4 to reach the trailhead?<span class="pl"></span></summary><p>The BLM says a two-wheel-drive car with high clearance can usually reach the trailhead when the road is dry, and flat tires are common. When the road is wet you may need a high-clearance 4x4, and in the rainy season and winter the road can be impassable for every vehicle.</p></details>
   <details><summary>Has anyone died hiking The Wave?<span class="pl"></span></summary><p>Yes. Four people have died in July heat since 2013: a couple aged 70 and 69 in July 2013, a 27-year-old hiker who lost the trail on the walk back that same month, and a 49-year-old hiker in July 2018 who still had water with him. In 2012 a hiker died after falling into a slot canyon after dark. A first-light start, plenty of water, a turnaround time and knowing the route back prevent most of this. Sources: <a href="https://archive.sltrib.com/article.php?id=56632938&amp;itype=CMSID" target="_blank" rel="noopener">Salt Lake Tribune</a>, <a href="https://www.ksl.com/article/46369416/authorities-believe-heat-to-blame-for-hiker-death-near-the-wave" target="_blank" rel="noopener">KSL</a>, <a href="https://www.nbcnews.com/news/us-news/southwest-hiking-destination-gaining-deadly-reputation-flna6c10727489" target="_blank" rel="noopener">NBC News</a>.</p></details>
+  <details><summary>When does a guide help most?<span class="pl"></span></summary><p>When a few things stack up: shaky route-finding, little experience in desert heat, a summer date, a late start, a car that can't handle a muddy dirt road, small children, or not much time to prepare. One of these you can usually fix before your date. Several at once is when a guide makes the day much easier.</p></details>
   <details><summary>What does a guide add beyond safety?<span class="pl"></span></summary><p>A guide tells the story of what you're standing in. The Wave is 190-million-year-old Navajo sandstone: petrified Jurassic dunes from one of the largest sand seas in Earth's history. The swirls record ancient wind directions, and the reds and golds are iron and manganese, banded in patterns named for the chemist Raphael Liesegang. A short detour reaches dinosaur trackways. The dark, crusty ground between the rock is living cryptobiotic soil, and one footprint sets it back decades. A guide also knows where the Second Wave, the side features and the best light are.</p></details>
  </div>
 </div></section>
@@ -371,7 +378,7 @@ var DAILY="You enter the daily lottery on your phone two days ahead while you're
 /* ---- steps (the steep-rock question only shows to people who want Melody Arch) ---- */
 var Q=[
  {id:'permit',t:"Permit",q:"Do you have a permit yet?",h:"Nobody hikes The Wave without one. The BLM gives them out by lottery.",a:[
-  {x:"Yes, I won one",v:'have'},{x:"Not yet. I'm entering the lottery",v:'trying'},{x:"I've entered and haven't won",v:'stuck'},{x:"I didn't know I needed one",v:'new'}]},
+  {x:"Yes, I won one",v:'have'},{x:"Not yet. I'm entering the lottery",v:'trying'},{x:"I've entered and haven't won",v:'stuck'},{x:"I'm not super familiar with the permit process",v:'new'}]},
  {id:'month',t:"Month",type:'month'},
  {id:'who',t:"Your group",multi:1,q:"Does any of this describe your group?",h:"Pick all that apply. Groups are capped at six people, and babies count.",a:[
   {x:"I'm going alone",v:'solo'},{x:"Kids under 12 are coming",v:'kids'},{x:"Someone is 65 or older",v:'older'},{x:"Someone has a heart, lung or blood-sugar condition",v:'health'},{x:"None of these",v:'none',only:1}]},
