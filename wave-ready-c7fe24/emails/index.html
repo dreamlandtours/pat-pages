@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wave Ready — Email Journeys &amp; Kit Setup (full copy)</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#faf6ee;--paper-2:#f1e9d9;--sand:#e4d3b0;--ink:#231d16;--ink-2:#5f5548;--terra:#b1472a;--terra-d:#8d3620;--canyon:#4f3120;--gold:#c98a3c;--line:rgba(35,29,22,.15);--line-2:rgba(35,29,22,.08);--disp:'Bricolage Grotesque',Georgia,serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Libre Franklin',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.62;font-size:17px;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:var(--disp);line-height:1.1;letter-spacing:-.015em;font-weight:700}
+a{color:var(--terra-d)}
+.wr{font-family:var(--disp);font-weight:800;color:var(--terra-d);white-space:nowrap}
+.wr::before{content:"▸";font-size:.7em;color:var(--terra);margin-right:.16em;vertical-align:.06em}
+.top{background:var(--ink);color:#faf3e7;padding:26px 30px;border-bottom:4px solid var(--terra)}
+.top .in{max-width:840px;margin:0 auto}
+.top h1{color:#fff;font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 .2em}
+.top p{margin:0;color:#d8cdbc;font-size:.98rem;max-width:720px}
+.top .live{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.top .live a{background:var(--terra);color:#fff;text-decoration:none;font-weight:600;font-size:.86rem;padding:8px 14px;border-radius:7px}
+.top .live a.alt{background:transparent;border:1px solid rgba(255,255,255,.3)}
+main{max-width:840px;margin:0 auto;padding:30px 24px 80px}
+section{padding:20px 0;border-bottom:1px solid var(--line-2)}
+h2{font-size:clamp(1.4rem,3.4vw,1.9rem);margin:.5em 0 .4em}
+h2 .n{color:var(--terra);font-size:.72em;margin-right:.4em}
+h3{font-size:1.12rem;margin:1.5em 0 .4em}
+p{margin:.7em 0}
+ul,ol{margin:.5em 0;padding-left:1.25em}li{margin:.3em 0}
+.lead{font-size:1.1rem;color:var(--ink-2)}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;background:var(--terra);padding:3px 9px;border-radius:99px}
+.rec{border-left:3px solid #5f7d3b;background:rgba(95,125,59,.09);padding:14px 18px;border-radius:0 8px 8px 0;margin:14px 0}
+.callout{border-left:3px solid var(--gold);background:var(--paper-2);padding:14px 18px;border-radius:0 8px 8px 0;margin:14px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.93rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line-2);vertical-align:top}
+th{font-family:var(--disp);font-weight:700;font-size:.8rem;text-transform:uppercase;color:var(--ink);background:var(--paper-2)}
+code{background:var(--paper-2);padding:1px 6px;border-radius:4px;font-size:.86em}
+.track{margin:26px 0 8px}
+.track .th{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.track .th h3{margin:0;font-size:1.3rem}
+.track .th .trig{font-size:.8rem;color:var(--ink-2)}
+.email{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0;box-shadow:0 12px 30px -26px rgba(35,29,22,.5)}
+.email .meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.email .when{font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;background:var(--canyon);padding:2px 9px;border-radius:99px}
+.email .subj{font-family:var(--disp);font-weight:700;font-size:1.08rem;margin:2px 0}
+.email .pre{font-size:.85rem;color:var(--ink-2);font-style:italic;margin:0 0 10px}
+.email .body{font-size:.97rem}
+.email .body p{margin:.55em 0}
+.email .cta{display:inline-block;background:var(--terra);color:#fff;text-decoration:none;font-weight:600;font-size:.85rem;padding:8px 14px;border-radius:7px;margin-top:6px}
+.email .sig{color:var(--ink-2);font-size:.9rem;margin-top:10px}
+nav.jump{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 0}
+nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-decoration:none;padding:5px 10px;border-radius:6px;font-weight:600}
+@media(max-width:640px){main{padding:22px 16px 60px}}
+</style>
+<style>.test-banner{background:#2b2118;color:#faf6ee;font:500 14px/1.45 'Libre Franklin',system-ui,sans-serif;padding:10px 16px;text-align:center}.test-banner b{color:#e4d3b0}</style>
+</head>
+<body>
+<div class="test-banner" role="note"><b>Draft email copy for the Dreamland team.</b> None of these emails are set up in Kit yet.</div>
+<header class="top"><div class="in">
+ <span class="tag">Internal · full email copy · 2026-07-13</span>
+ <h1>Email journeys &amp; Kit setup</h1>
+ <p>Every email that fires once Kit is wired — the actual copy, per quiz result — plus the answer to your Kit-account and Dreamland-cutover question.</p>
+ <div class="live">
+  <a href="https://wave-ready-playbook-r4t9.surge.sh/" target="_blank">← Back to the Playbook</a>
+  <a class="alt" href="https://wave-ready-q7m3k.surge.sh/" target="_blank">The live quiz</a>
+ </div>
+</div></header>
+<main>
+
+<section id="kit">
+ <h2><span class="n">A</span>Do you need a second Kit account? (Short answer: no.)</h2>
+ <p class="lead">You can run both <span class="wr">Wave Ready</span> and Dreamland from your one Dreamland Kit account. Here's the honest trade-off, then my recommendation.</p>
+ <p><b>What Kit allows (verified):</b> Kit is subscriber-centric — one master list, separated by <b>tags and segments</b>. You can add <b>multiple "From" addresses</b> (add each, confirm it, then pick the right one per sequence/broadcast). So you can send <span class="wr">Wave Ready</span> emails from a Wave Ready address and Dreamland emails from the Dreamland address in the same account.</p>
+ <p><b>The one caveat:</b> Kit authenticates a single <em>sending domain</em> for the whole account, and that domain shows in the technical headers of <em>every</em> email regardless of the "From" address. So Wave Ready emails would carry Dreamland's sending domain under the hood. Almost no recipient ever sees that (it's in the "signed-by/via" headers), and Wave Ready openly discloses the Dreamland relationship anyway — so it's a minor cosmetic thing, not a dealbreaker.</p>
+ <div class="rec"><b>Recommendation — one account (Option A).</b> Keep everything in the Dreamland Kit account. Add a <span class="wr">Wave Ready</span> From-name + address; tag every quiz subscriber <code>wave-ready</code> plus their result tier and goals; send the Wave Ready sequences from the Wave Ready address; never use "All Subscribers" (it mixes the two audiences — always send to the tag/segment). It's cheaper, simpler, and it's the "both brands under Dreamland" you wanted.</div>
+ <p><b>When a second account (Option B) is worth it:</b> only if Wave Ready gets big and you want fully separate deliverability reputation + its own authenticated <code>wave-ready</code> domain, or the shared-domain header bugs you. Cost: a second subscription, double admin, and a Zap to copy converts back to Dreamland. Not worth it to start.</p>
+
+ <h3>So when/where does the cutover to Dreamland marketing happen?</h3>
+ <p>Two moments — and you should <b>not</b> silently migrate everyone (that erodes the third-party trust and invites spam complaints):</p>
+ <ol>
+  <li><b>Behavioral (implicit):</b> the moment a subscriber clicks a Dreamland tour link or books, auto-tag them <code>dreamland-warm</code> and add them to Dreamland's main nurture. They've raised their hand.</li>
+  <li><b>Bridge (explicit opt-in):</b> near the end of each Wave Ready sequence, one honest hand-off email invites them to join Dreamland's list. One click. Full copy is the last email below.</li>
+ </ol>
+ <div class="callout"><b>The rule:</b> <span class="wr">Wave Ready</span> owns the top of funnel and the honest help. Dreamland owns them once they click, book, or opt in. The bridge email + behavioral tagging <em>is</em> the cutover — no second account required.</div>
+</section>
+
+<section id="map">
+ <h2><span class="n">B</span>How the sequences fire</h2>
+ <p>On quiz completion + email capture, Kit gets the subscriber with these fields/tags: <code>wave_tier</code> (solo / close / notready), <code>wave_permit</code> (have / trying / stuck / new), <code>wave_permit_month</code> (if they hold one), <code>wave_goal</code>, the five domain scores, and <code>first_name</code>. Two axes drive everything — <b>readiness</b> and <b>permit status</b> — so a not-ready hiker who already holds a September permit gets a different journey than a solo-ready hiker still in the lottery. That drives the branch:</p>
+ <table>
+  <tr><th>Trigger</th><th>Sequence</th></tr>
+  <tr><td>Everyone, on signup</td><td><b>Email 0</b> — deliver the Wave Prep Kit</td></tr>
+  <tr><td><code>wave_tier = notready</code> or <code>close</code></td><td><b>Track A</b> — Ready-up &amp; guide (4 emails)</td></tr>
+  <tr><td><code>wave_tier = solo</code></td><td><b>Track B</b> — Solo playbook (3 emails)</td></tr>
+  <tr><td><code>wave_permit = have</code> (+ month)</td><td><b>Track E</b> — Permit-holder countdown, scheduled to <code>wave_permit_month</code> (3 emails)</td></tr>
+  <tr><td><code>wave_permit = trying / stuck / new</code></td><td><b>Track C</b> — Permit &amp; alternatives (3 emails, runs alongside)</td></tr>
+  <tr><td><code>wave_goal = photo</code></td><td><b>Track D</b> — Photographer (2 emails, runs alongside)</td></tr>
+  <tr><td>End of any track</td><td><b>Bridge</b> — opt into Dreamland</td></tr>
+  <tr><td>Monthly, to non-converters</td><td><b>Broadcast</b> — Lottery-results day</td></tr>
+ </table>
+ <p class="callout"><b>Voice:</b> all Wave Ready emails are plain, warm, safety-patrol/local-hiker — never salesy. Dreamland is named as the recommended outfitter when a guide fits, always disclosed. Sender shown below as <em>Wave Ready</em>; the actual From-address is TBD (e.g. hello@wave-ready.org — to register).</p>
+ <nav class="jump">
+  <a href="#e0">Email 0</a><a href="#a">Track A</a><a href="#b">Track B</a><a href="#c">Track C</a><a href="#d">Track D</a><a href="#e">Track E</a><a href="#bridge">Bridge</a><a href="#broadcast">Lottery day</a>
+ </nav>
+</section>
+
+<section id="e0">
+ <h2><span class="n">C</span>Email 0 — delivered instantly (everyone)</h2>
+ <div class="email">
+  <div class="meta"><span class="when">Immediate</span><span class="tag">all</span></div>
+  <div class="subj">Subject: Your Wave Prep Kit is inside</div>
+  <p class="pre">Preview: Your plan, the permit calendar, and the route sheet — as promised.</p>
+  <div class="body">
+   <p>Hi {{first_name}},</p>
+   <p>Here's your <b>Wave Prep Kit</b>, built from your answers: <a href="#">your personalized plan</a>, the permit-lottery calendar, the BLM landmark-photo route sheet, a water-and-heat plan, and a one-page packing checklist. Download it here → <a href="#">[link]</a></p>
+   <p>Quick background, because it matters: Wave Ready is put together by experienced locals and frequent Wave hikers — guides, and folks who volunteer on the Wave's BLM safety patrol and Kane County search-and-rescue. We see the preventable trouble out there, so this isn't a sales funnel — it's us trying to get you a great, safe day, whether that's on your own or with a guide.</p>
+   <p>Over the next week or two I'll send a few useful notes tuned to your result ({{wave_tier}}). No spam, unsubscribe anytime. Just hit reply if you have a question — a real person who's hiked this answers.</p>
+   <p class="sig">— The Wave Ready crew<br>Kanab, UT · supported by Dreamland Safari Tours</p>
+  </div>
+ </div>
+</section>
+
+<section id="a">
+ <div class="track"><div class="th"><h3>Track A — Ready-up &amp; guide</h3><span class="trig">fires when <code>wave_tier = notready</code> or <code>close</code></span></div></div>
+
+ <div class="email"><div class="meta"><span class="when">Day 1</span></div>
+  <div class="subj">Subject: The one thing to fix first</div>
+  <p class="pre">Preview: Your scorecard already told you where you're thin.</p>
+  <div class="body">
+   <p>Hi {{first_name}},</p>
+   <p>Your readiness came back {{wave_tier}}, which honestly is where most people land — the Wave is a harder day than the photos suggest. The good news: your scorecard shows <em>exactly</em> where you're thin, so you're not guessing.</p>
+   <p>Whatever your lowest bar was, that's your first project. The usual culprits: <b>route-finding</b> (there's no trail — you match landmark photos across look-alike slickrock), <b>heat &amp; timing</b> (be walking by first light, carry a gallon of water), and <b>the road</b> (a rental in the wet is how people get stuck). Your plan lists the specific fix for each.</p>
+   <p>Re-open your plan and pick one thing to lock down this week → <a href="#">[link]</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 3</span></div>
+  <div class="subj">Subject: Why we're careful about this one</div>
+  <p class="pre">Preview: A pattern worth knowing before you go.</p>
+  <div class="body">
+   <p>This is the part we don't sugar-coat, because it's why Wave Ready exists.</p>
+   <p>In one month in July 2013, three people died at the Wave: Ulrich and Patricia Wahli, a married couple, both of heat exhaustion — and Elisabeth Bervel, 27, who lost the route on the way back. In 2018, Christophe Pochic died after getting disoriented on the return with his teenage son. He <em>still had water with him.</em></p>
+   <p>See the thread? Most happened on the way <b>out</b>, when heat and losing the route stacked up together. Carrying water isn't enough if you get turned around in 100°F with no shade. That's the exact failure a guide is trained to prevent — and it's the failure your plan is built to help you avoid solo, too.</p>
+   <p><a class="cta" href="https://wave-ready-q7m3k.surge.sh/#trust">Read the full safety context</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 6</span></div>
+  <div class="subj">Subject: What a guide actually does out here</div>
+  <p class="pre">Preview: It's more than not-getting-lost.</p>
+  <div class="body">
+   <p>If your result is leaning "go with a guide," here's what you're actually buying — because it's a lot more than hand-holding:</p>
+   <ul>
+    <li><b>Route-finding &amp; heat pacing</b> on ground that has killed people.</li>
+    <li><b>Satellite comms and wilderness-medical training</b> for the "what if" you can't plan around.</li>
+    <li><b>The drive</b> up House Rock Valley Road — the part that eats rentals.</li>
+    <li><b>The story:</b> 190-million-year-old petrified dunes, dinosaur trackways, the living soil crust underfoot, and the hidden spots (Melody Arch, the Second Wave) most people walk right past.</li>
+   </ul>
+   <p>The outfitter we'd point you to is <b>Dreamland Safari Tours</b> in Kanab — the folks who help run Wave Ready, and who guide Coyote Buttes North as a full day. (You can also see BLM's full authorized-guide list and pick anyone.)</p>
+   <p><a class="cta" href="https://dreamlandtours.net/day-tours/paria-canyon-vermilion-cliffs/the-wave-tour/">See the guided Wave day</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 10</span></div>
+  <div class="subj">Subject: Don't have a permit yet? There's a move for that.</div>
+  <p class="pre">Preview: A real shot at the Wave, with a guaranteed backup.</p>
+  <div class="body">
+   <p>Two things can go sideways on a Wave trip: not being ready, and not winning the permit. If the permit's your sticking point, here's the smart hedge.</p>
+   <p>Dreamland's <b>Conditional tour</b> enters the last-minute (geofence) lottery <em>for</em> you. Win, and a guide takes you into the Wave. Don't win, and they try the South Coyote Buttes lottery next, which is much easier to win. If both miss, you go to White Pocket, which needs no permit. A lot of people like those two <em>more.</em> Either way you get a guided day instead of a wasted trip.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/wave-conditional-tour/">How the Conditional tour works</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+</section>
+
+<section id="b">
+ <div class="track"><div class="th"><h3>Track B — Solo playbook</h3><span class="trig">fires when <code>wave_tier = solo</code></span></div></div>
+
+ <div class="email"><div class="meta"><span class="when">Day 1</span></div>
+  <div class="subj">Subject: You're cleared to go solo — here's the playbook</div>
+  <p class="pre">Preview: The five things that make it smooth and safe.</p>
+  <div class="body">
+   <p>Hi {{first_name}} — your readiness came back solo-ready, which means the Wave is yours to do on your own. We're not going to try to sell you a guide you don't need. Instead, here's the tight version of doing it right:</p>
+   <ol>
+    <li>Enter <b>both</b> lotteries — the advance one (~4 months out) and the daily geofence one (2 days before).</li>
+    <li>Download the BLM landmark-photo route sheet <em>and</em> an offline GPS track. Study the photos before you go.</li>
+    <li>Be walking by first light. Carry a gallon of water, salty snacks, and a hard turnaround time.</li>
+    <li>Carry a satellite messenger — there's no cell service.</li>
+    <li>A normal high-clearance vehicle is fine for the trailhead when the road's dry; skip it if it's been wet.</li>
+   </ol>
+   <p>It's all in your plan → <a href="#">[link]</a>. Go get it.</p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 4</span></div>
+  <div class="subj">Subject: The stuff most solo hikers walk right past</div>
+  <p class="pre">Preview: Melody Arch, the Second Wave, and 190 million years of story.</p>
+  <div class="body">
+   <p>You'll get the famous shot. But the Wave rewards people who know where to look:</p>
+   <ul>
+    <li><b>Melody Arch</b> — guests say it rivals the Wave itself. It's past a steep slickrock climb and isn't visible from below, so most people miss it. The challenge is route-finding, not nerve.</li>
+    <li><b>The Second Wave &amp; the dinosaur tracks</b> — a short detour to Jurassic trackways ~190 million years old.</li>
+    <li><b>The rock itself</b> — petrified sand dunes; the colors are iron and manganese, and the dark crust between the rock is <em>alive</em> (step only on stone).</li>
+   </ul>
+   <p>Your plan has notes on finding these. If you'd rather have someone read the whole landscape for you, that's the one thing a local guide adds even for strong hikers — more on that later.</p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 8</span></div>
+  <div class="subj">Subject: When you want more than the checklist</div>
+  <p class="pre">Preview: The corners that are hard to do solo.</p>
+  <div class="body">
+   <p>You don't need a guide for the Wave, and we'd never pretend otherwise. But a couple of things out here reward going with a local:</p>
+   <p><b>White Pocket</b> (no permit, but a serious deep-sand drive that strands DIYers weekly) and the <b>Sandstone Teepees</b> (off-trail, almost nobody out there). And if you want the geology, botany and history read to you while you walk — that's what the interpretation is for.</p>
+   <p>If any of that appeals, <b>Dreamland Safari Tours</b> — the Kanab outfitter that helps run Wave Ready — does all of it. No pressure; you clearly know your way around.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/day-tours/paria-canyon-vermilion-cliffs/white-pocket/">See White Pocket</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+</section>
+
+<section id="c">
+ <div class="track"><div class="th"><h3>Track C — Permit &amp; alternatives</h3><span class="trig">runs alongside, when <code>wave_permit = trying / stuck / new</code></span></div></div>
+
+ <div class="email"><div class="meta"><span class="when">Day 1</span></div>
+  <div class="subj">Subject: Let's get you a permit (or a great Plan B)</div>
+  <p class="pre">Preview: Both lotteries, the deadlines, and honest odds.</p>
+  <div class="body">
+   <p>The Wave lets in 64 people a day, and peak-season odds run about 2–10%. So the smart play is to enter <b>both</b> lotteries and have a backup you'd actually be happy with.</p>
+   <ul>
+    <li><b>Advance lottery:</b> apply ~4 months ahead, any device.</li>
+    <li><b>Daily geofence lottery:</b> apply on your phone, inside the geofence, 2 days before.</li>
+   </ul>
+   <p>Your Prep Kit has the calendar with the exact apply-by dates. Full mechanics here → <a class="cta" href="https://dreamlandtours.net/permits/">How the Wave permit works</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 4</span></div>
+  <div class="subj">Subject: The Wave's easier-to-reach cousins</div>
+  <p class="pre">Preview: Same otherworldly rock, far better odds.</p>
+  <div class="body">
+   <p>If the lottery's not cooperating, don't write off the trip — the best-kept secret out here is that the Wave's neighbors are just as surreal:</p>
+   <ul>
+    <li><b>White Pocket</b> — no permit at all. Swirled "brain rock." The only catch is a serious 4×4 sand drive.</li>
+    <li><b>South Coyote Buttes</b> — a permit lottery that's <em>far</em> easier to win (~15–20%), with cinematic teepees and almost nobody around.</li>
+   </ul>
+   <p>Plenty of people who came for the Wave leave saying one of these was their favorite day.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/day-tours/paria-canyon-vermilion-cliffs/south-coyote-buttes/">See South Coyote Buttes</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 8</span></div>
+  <div class="subj">Subject: For people who keep losing the lottery</div>
+  <p class="pre">Preview: An extra shot, plus a guaranteed day either way.</p>
+  <div class="body">
+   <p>Here's the move if you're set on the Wave but tired of striking out: Dreamland's <b>Conditional tour</b> enters the last-minute lottery on your behalf. Win, and a guide takes you in. Lose, and they try the South Coyote Buttes lottery. If that misses too, you're guaranteed a guided day at White Pocket instead. You find out the day before.</p>
+   <p>It's the closest thing to a hedge that exists for the Wave.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/wave-conditional-tour/">How the Conditional tour works</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+</section>
+
+<section id="d">
+ <div class="track"><div class="th"><h3>Track D — Photographer</h3><span class="trig">runs alongside, when <code>wave_goal = photo</code></span></div></div>
+
+ <div class="email"><div class="meta"><span class="when">Day 2</span></div>
+  <div class="subj">Subject: Shoot the Wave at midday (yes, really)</div>
+  <p class="pre">Preview: Counterintuitive, but it's how the shot works.</p>
+  <div class="body">
+   <p>Most landscape rules say avoid midday. The Wave breaks that rule: it photographs best when the sun's high enough that <b>no shadow</b> falls across the formation. The light's harsh — that's just Wave photography.</p>
+   <p>So plan your permit day to be <em>at</em> the formation around noon — but still start hiking at first light, so the heat on the approach doesn't cook you. Your Prep Kit has the timing.</p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">Day 5</span></div>
+  <div class="subj">Subject: Where the golden-hour light actually is</div>
+  <p class="pre">Preview: For softer light and different subjects.</p>
+  <div class="body">
+   <p>The Wave is a midday subject and permit-locked. For golden hour and variety, the move is <b>South Coyote Buttes</b> (cinematic teepees, easier permit) and <b>White Pocket</b> — where an overnight puts you on the rock for sunset <em>and</em> sunrise with nobody around.</p>
+   <p>Dreamland runs photo-oriented days to both, and their guides know where the light lands. If you want to plan a shoot, that's who we'd ask.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/day-tours/white-pocket-overnight-photography/">White Pocket overnight</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+</section>
+
+<section id="e">
+ <div class="track"><div class="th"><h3>Track E — Permit-holder countdown</h3><span class="trig">fires when <code>wave_permit = have</code>, timed to <code>wave_permit_month</code></span></div></div>
+ <p class="callout">Someone who already holds a permit doesn't need "enter the lottery" emails — they need a countdown to their date. These three schedule off <code>wave_permit_month</code> (in Kit: if the month's within ~6 weeks, start now; otherwise begin the sequence ~6 weeks out). A permit-holder whose readiness came back <b>not-ready</b> is the single strongest guide candidate on the site — they've got the date but not the skills yet.</p>
+ <div class="callout"><b>Seasonal tailoring (this is the important part):</b> a permit-holder knows their month, so the weather and heat-management copy in this track is <b>not generic</b> — it swaps by season. Kit branches Track E on <code>wave_permit_month</code> into one of three warning blocks:</div>
+ <table>
+  <tr><th>If their month is…</th><th>The tailored warning that replaces the generic heat copy</th></tr>
+  <tr><td><b>Summer</b><br>(Jun–Aug)</td><td>The deadly season. 100°F+, no shade or water — every documented Wave death was summer heat. Be walking at first light (guides start at 6am), carry a gallon-plus of water and electrolytes, set a hard turnaround, and watch for monsoon storms that flood the drainages and turn the road to "gorilla snot." Lean hardest on "add a guide to your date" here.</td></tr>
+  <tr><td><b>Prime</b><br>(Apr–May,<br>Sep–Oct)</td><td>Best conditions of the year, low heat risk. Still carry water and start early — spring brings wind, fall shortens the days — but the emphasis shifts from heat survival to route-finding, fitness and gear.</td></tr>
+  <tr><td><b>Winter</b><br>(Nov–Mar)</td><td>A cold-weather hike: short daylight (dawn start + headlamp), ice and snow that make the slickrock slippery (falls are common), and a road that can be icy or muddy. Dress for cold and wind; don't get caught out after dark. Heat isn't the risk here — cold, footing and low light are.</td></tr>
+ </table>
+
+
+ <div class="email"><div class="meta"><span class="when">~6 weeks out</span></div>
+  <div class="subj">Subject: Your Wave date is set — now let's make it count</div>
+  <p class="pre">Preview: You've got the hard part. Here's the prep that matters.</p>
+  <div class="body">
+   <p>Hi {{first_name}} — congratulations. A permit for {{wave_permit_month}} is the part most people never get. Now the job is to be ready for it.</p>
+   <p>Based on your check ({{wave_tier}}), spend the next few weeks here: study the route (there's no trail — you match landmark photos), dial your fitness for ~6 miles of sand and slickrock, sort your gear and water, and prep for exactly what {{wave_permit_month}} throws at you — heat, cold, or storms (your season's specific warnings are in your kit, tailored to your month). Your prep kit has the full countdown.</p>
+   <p>If your result came back <b>not-ready</b>, be honest with yourself now, while there's still time to close the gap — or lock in a guide for your date so the day's a win either way.</p>
+   <p><a class="cta" href="#">Open your countdown plan</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">~2 weeks out</span></div>
+  <div class="subj">Subject: Two weeks to your Wave hike — the checklist</div>
+  <p class="pre">Preview: Maps, water, the road, and a first-light plan.</p>
+  <div class="body">
+   <p>Getting close. Two weeks out, lock these in:</p>
+   <ul>
+    <li>Download the BLM landmark-photo route sheet <em>and</em> an offline GPS track — and study them cold.</li>
+    <li>Plan your water (a gallon minimum) and a heat plan for {{wave_permit_month}} conditions.</li>
+    <li>Confirm your vehicle can handle House Rock Valley Road in {{wave_permit_month}} — wet, it turns to "gorilla snot."</li>
+    <li>Plan to be walking at first light, with a hard turnaround time.</li>
+   </ul>
+   <p><a class="cta" href="https://dreamlandtours.net/the-wave-arizona-everything-you-need-to-know/">The road, weather &amp; gear rundown</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+
+ <div class="email"><div class="meta"><span class="when">A few days out</span></div>
+  <div class="subj">Subject: Final call before your Wave day</div>
+  <p class="pre">Preview: One last check — and an option if you're not feeling it.</p>
+  <div class="body">
+   <p>Day-before checklist: recheck the forecast and road, carry a satellite messenger (no cell service), top off water, and commit to your turnaround time.</p>
+   <p>And if you're honest with yourself and you're <em>not</em> feeling ready for trail-less route-finding in the heat — that's OK, and you still have a move. Dreamland guides Coyote Buttes North every day and can often pair a guide to your existing permit date. A hard-won permit is worth doing right.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/day-tours/paria-canyon-vermilion-cliffs/the-wave-tour/">Add a guide to your date</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+</section>
+
+<section id="bridge">
+ <h2><span class="n">D</span>The Bridge — the cutover to Dreamland</h2>
+ <div class="email"><div class="meta"><span class="when">~Day 14, end of any track</span><span class="tag">the cutover</span></div>
+  <div class="subj">Subject: A note about who's behind Wave Ready</div>
+  <p class="pre">Preview: If the guides can help with your trip, here's the door.</p>
+  <div class="body">
+   <p>Hi {{first_name}} — quick, honest note as this wraps up.</p>
+   <p>Wave Ready is supported by <b>Dreamland Safari Tours</b>, the Kanab outfitter that helps build and run it. We've kept them in the background on purpose, because this is a safety tool first. But if you're planning a Vermilion Cliffs trip — the Wave, White Pocket, the slot canyons, or you just want permit reminders and the occasional local tip straight from the guides — they'd love to help directly.</p>
+   <p>Want that? Join Dreamland's list — one click, and you can leave anytime.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/">Yes, connect me with Dreamland</a></p>
+   <p>Either way, thanks for letting us be part of your trip. Hike smart out there.</p>
+   <p class="sig">— The Wave Ready crew</p>
+  </div>
+ </div>
+ <p class="callout"><b>Kit wiring:</b> the button tags them <code>dreamland-opt-in</code> → adds to Dreamland's main list/nurture. That's the clean, consent-based cutover. People who click a tour link earlier get tagged <code>dreamland-warm</code> automatically and can enter Dreamland nurture sooner.</p>
+</section>
+
+<section id="broadcast">
+ <h2><span class="n">E</span>Recurring broadcast — Lottery-results day</h2>
+ <div class="email"><div class="meta"><span class="when">Monthly, results day</span><span class="tag">non-converters</span></div>
+  <div class="subj">Subject: Didn't win this month? You've still got a trip.</div>
+  <p class="pre">Preview: The options nobody tells the people who lose.</p>
+  <div class="body">
+   <p>Results are out, and if your name wasn't on the list — you're in the majority, and you're not out of luck.</p>
+   <p>You can enter again (your Prep Kit has next month's dates), or you can have a jaw-dropping day <em>now</em> at a place with far better odds: White Pocket (no permit at all), or South Coyote Buttes (a permit that's much easier to win than the Wave). And if you want to keep a real shot at the Wave itself, Dreamland's Conditional tour enters the last-minute lottery for you with a guaranteed backup.</p>
+   <p>Don't let a lottery decide whether you see this place.</p>
+   <p><a class="cta" href="https://dreamlandtours.net/wave-conditional-tour/">See your options</a></p>
+   <p class="sig">— Wave Ready</p>
+  </div>
+ </div>
+ <p class="callout">Send to <code>wave-ready</code> minus <code>dreamland-warm</code>/booked. This is historically the single highest-converting moment in the whole cycle — the day heartbreak meets a real alternative.</p>
+</section>
+
+</main>
+</body>
+</html>
