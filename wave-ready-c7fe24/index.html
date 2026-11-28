@@ -366,9 +366,9 @@ var MON={
  March:{w:0,r:0,t:"March swings. It can be crisp and perfect, or cold, windy and muddy. Check the forecast and the road the day before."},
  April:{w:1,r:1,t:"April is usually pleasant. Wind and blowing sand are common, and the odd spring storm moves through fast. Pack sunglasses and a buff."},
  May:{w:1,r:1,t:"May is usually lovely, but it can spike into the 90s. Check the forecast, and start early either way."},
- June:{w:0,r:1,hot:1,summer:1,t:"June is hot and dry, with highs of 90 to 100°F and up and no shade. Be walking at first light and carry plenty of water."},
- July:{w:-1,r:0,hot:1,summer:1,t:"July is the hottest month, with highs of 95 to 105°F and up, and afternoon storms that flood washes and muddy the road. Be walking at first light, set a turnaround time you keep, and check the forecast the night before."},
- August:{w:-1,r:0,hot:1,summer:1,t:"August brings extreme heat and the year's most active storms, which flood washes and can wash out the road. Be walking at first light, set a turnaround time you keep, and check the forecast the night before."},
+ June:{w:0,r:1,hot:1,summer:1,t:"June is hot and dry, with highs of 90 to 100°F and up and no shade. Start hiking at first light and carry plenty of water."},
+ July:{w:-1,r:0,hot:1,summer:1,t:"July is the hottest month, with highs of 95 to 105°F and up, and afternoon storms that flood washes and muddy the road. Start hiking at first light, set a turnaround time you keep, and check the forecast the night before."},
+ August:{w:-1,r:0,hot:1,summer:1,t:"August brings extreme heat and the year's most active storms, which flood washes and can wash out the road. Start hiking at first light, set a turnaround time you keep, and check the forecast the night before."},
  September:{w:0,r:1,hot:1,t:"September is still hot and stormy early in the month and excellent by the end. Check the forecast and start early."},
  October:{w:1,r:1,t:"October is often the best month: mild, stable, with a dry road. Days are shorter, so start at first light and carry a headlamp."},
  November:{w:1,r:1,t:"November is crisp and quiet. Days are short, and the first storms can muddy the road. Carry a headlamp and check the road the day before."},
@@ -385,7 +385,7 @@ var Q=[
   {x:"I'm going alone",v:'solo'},{x:"Kids under 12 are coming",v:'kids'},{x:"Someone is 65 or older",v:'older'},{x:"Someone has a heart, lung or blood-sugar condition",v:'health'},{x:"None of these",v:'none',only:1}]},
  {id:'car',t:"The road",q:"What will you drive to the trailhead?",h:"The last 8 miles are a dirt road. High clearance means the car sits high off the ground, like a Jeep. Rain turns the road to mud.",a:[
   {x:"My own SUV or truck with high clearance",v:'own'},{x:"A rented SUV or Jeep with high clearance",v:'rent4'},{x:"A rented car or minivan",v:'rentcar'},{x:"My own car or minivan",v:'owncar'},{x:"I haven't booked a car yet",v:'unsure'},{x:"I'd rather someone else drive",v:'driver'}]},
- {id:'start',t:"Start time",q:"When will you start walking?",h:"There's almost no shade. A late start puts the walk back in the hottest part of the day.",a:[
+ {id:'start',t:"Start time",q:"What time do you plan to start hiking?",h:"There's almost no shade. A late start puts the walk back in the hottest part of the day.",a:[
   {x:"At first light",v:1},{x:"Around 7 or 8 in the morning",v:0},{x:"Mid-morning or later",v:-1},{x:"Not sure yet",v:'unsure'}]},
  {id:'fit',t:"Fitness",q:"What's the hardest hike you've done comfortably in the past year?",h:"If others are coming, answer for the least fit person. The Wave is 6.4 miles round trip, and a third of it is on uneven sandstone.",a:[
   {x:"A Grand Canyon rim-to-rim, a 14,000-ft peak or a backpacking trip",v:2},{x:"Several 8 to 12 mile days with real climbing",v:2},{x:"A 6-mile hike with some climbing",v:1},{x:"Local trails of 3 to 5 miles",v:0},{x:"Mostly flat walks",v:-1},{x:"I'm not really a hiker",v:-2}]},
@@ -479,7 +479,7 @@ function nextAction(s){var p=ans.permit,mo=ans.month;
  ks.sort(function(a,b){return Lv[a]-Lv[b]||order.indexOf(a)-order.indexOf(b)});
  var k=ks[0];
  if(k==='heat'){if(s.m&&s.m.cold)return 'Plan a first-light start, pack a headlamp and warm layers, and check the forecast the day before.';
-  return ans.start===1?'Set a turnaround time you will keep, and carry more than a gallon of water each.':'Plan to be walking at first light, and set a turnaround time you will keep.'}
+  return ans.start===1?'Set a turnaround time you will keep, and carry more than a gallon of water each.':'Plan to start hiking at first light, and set a turnaround time you will keep.'}
  if(k==='fit')return 'Start training now: 4 to 5 days a week, including walks of 1.5 miles or more in loose sand.';
  if(k==='veh')return ans.car==='rentcar'?'Ask your rental company whether dirt roads are allowed, and check the road the day before.':(s.m&&s.m.r<0?'Line up a high-clearance 4x4 or a driver. In '+mo+' the road is often mud or ice.':'Check the forecast and the road the day before. After rain, a regular car can get stuck.');
  if(k==='gear')return 'Get a pack that carries a gallon of water per person, and a satellite messenger or someone at home with your plan.';
@@ -490,7 +490,7 @@ function plan(s){var r=[],m=s.m,mo=ans.month,goal=ans.goal||[],Lv=s.L;
  if(Lv.nav<=1)add(1,'Learn the route before you go',"For most of the route there's no trail. The BLM's route description, with a map, a photo guide and GPS points, comes with your permit. Study it at home, save the points in an offline map app, and photograph each landmark over your shoulder on the way in. Routes on third-party apps have led people astray.");
  else add(4,'The walk back',"The rock looks different facing the other way, and the walk back is where people lose the route. Photograph each landmark over your shoulder on the way in, and carry a battery pack.");
  if(m)add(m.summer?1:(Lv.heat<=1?2:5),'In '+mo,m.t);
- if(ans.start===-1&&(s.hot||(m&&m.cold)))add(s.hot?1:3,'Start earlier',s.hot?"There's almost no shade. A mid-morning start puts the walk back in the hottest part of the day, so plan to be walking at first light.":"Winter days are short. A mid-morning start leaves little daylight for the walk back, so plan to be walking at first light.");
+ if(ans.start===-1&&(s.hot||(m&&m.cold)))add(s.hot?1:3,'Start earlier',s.hot?"There's almost no shade. A mid-morning start puts the walk back in the hottest part of the day, so plan to start hiking at first light.":"Winter days are short. A mid-morning start leaves little daylight for the walk back, so plan to start hiking at first light.");
  add((s.hot||Lv.heat<=1)?2:5,'Water',"The BLM says at least a gallon of water per person, about 8.3 lb, and more in summer. Bring salty snacks or electrolytes too.");
  if(ans.car==='rent4')add(3,'Read the rental contract',"Some rental contracts ban dirt roads, even for SUVs. Check yours before the trip.");
  if(ans.car==='rentcar'||ans.car==='owncar'){var rent=ans.car==='rentcar'?" Ask your rental company whether dirt roads are allowed.":"";
@@ -498,7 +498,7 @@ function plan(s){var r=[],m=s.m,mo=ans.month,goal=ans.goal||[],Lv=s.L;
   else add(3,'The road',"The BLM says a two-wheel-drive car with high clearance can usually make it when the road is dry. A low car may scrape or bog down in sand, and flat tires are common, so check the forecast the night before and carry a full-size spare."+rent);}
  if(Lv.fit<=1)add(2,'Train for sand and sloping rock',"The hike is 6.4 miles, a third of it on uneven sandstone and some of it in deep sand. Dreamland's 8-week plan: 4 to 5 days a week, including walks of 1.5 miles or more in loose sand.");
  if(has('kids'))add(2,'Hiking with kids',"The route crosses sloping bare rock that's slippery when wet or icy, so carrying a child takes care. Plan water and shade breaks for each child. Babies count toward the six-person limit and need to be on the permit.");
- if(has('older')||has('health'))add(2,'Pace and health',"Plan a slower pace, extra rest and a turnaround time you keep. Heat is hardest on the heart and on blood sugar, so in warm months be walking at first light. If someone has a condition, ask their doctor about a long day in desert heat.");
+ if(has('older')||has('health'))add(2,'Pace and health',"Plan a slower pace, extra rest and a turnaround time you keep. Heat is hardest on the heart and on blood sugar, so in warm months start hiking at first light. If someone has a condition, ask their doctor about a long day in desert heat.");
  var weakHelp=ans.help==='phone'||ans.help===-1;
  if(has('solo'))add(2,'Going alone',"Leave your route and your return time with someone at home."+(weakHelp?" A phone may not reach anyone out there, so carry a satellite messenger or a personal locator beacon.":""));
  else if(weakHelp)add(2,'A way to call for help',"A phone may not reach anyone out there. A satellite messenger or a personal locator beacon can, and someone at home should have your route and return time.");
@@ -509,7 +509,7 @@ function plan(s){var r=[],m=s.m,mo=ans.month,goal=ans.goal||[],Lv=s.L;
  if(goal.indexOf('photo')>=0)add(5,'Photographs',"The Wave photographs best in the mid-morning hours, and Melody Arch and the side features are best in afternoon light."+(s.hot?" In hot months, finish your photos by late morning and start back before the heat.":" If you stay for late light, carry a headlamp, save your return route and set a turnaround time, so you're not walking out in the dark."));
  if(goal.indexOf('quiet')>=0)add(6,'Quieter corners',"South Coyote Buttes, a separate permit area nearby, sees fewer visitors than The Wave or White Pocket. White Pocket needs no permit but sees tour groups. Both need a 4x4 that handles deep sand, or a tour.");
  if(s.todo.indexOf('month')>=0)add(4,'Still to decide: your month',"April, May, September and October are the kindest. July and August are the hottest and stormiest.");
- if(s.todo.indexOf('start')>=0)add(4,'Still to decide: your start time',"Aim to be walking at first light.");
+ if(s.todo.indexOf('start')>=0)add(4,'Still to decide: your start time',"Aim to start hiking at first light.");
  if(s.todo.indexOf('car')>=0)add(4,'Still to decide: your car',"A high-clearance SUV or Jeep gives you the best chance on the dirt road. A regular car usually makes it only when the road is dry.");
  r.sort(function(a,b){return a.p-b.p});return r;}
 
