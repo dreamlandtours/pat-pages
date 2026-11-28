@@ -93,7 +93,7 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
  <p>On quiz completion + email capture, Kit gets the subscriber with these fields/tags: <code>wave_tier</code> (solo / close / notready), <code>wave_permit</code> (have / trying / stuck / new), <code>wave_permit_month</code> (if they hold one), <code>wave_goal</code>, the five domain scores, and <code>first_name</code>. Two axes drive everything — <b>readiness</b> and <b>permit status</b> — so a not-ready hiker who already holds a September permit gets a different journey than a hiker ready to go solo still in the lottery. That drives the branch:</p>
  <table>
   <tr><th>Trigger</th><th>Sequence</th></tr>
-  <tr><td>Everyone, on signup</td><td><b>Email 0</b> — deliver the Wave Prep Kit</td></tr>
+  <tr><td>Everyone, on signup</td><td><b>Email 0</b> — deliver the pack list and the 8-week training plan</td></tr>
   <tr><td><code>wave_tier = notready</code> or <code>close</code></td><td><b>Track A</b> — Ready-up &amp; guide (4 emails)</td></tr>
   <tr><td><code>wave_tier = solo</code></td><td><b>Track B</b> — Solo playbook (3 emails)</td></tr>
   <tr><td><code>wave_permit = have</code> (+ month)</td><td><b>Track E</b> — Permit-holder countdown, scheduled to <code>wave_permit_month</code> (3 emails)</td></tr>
@@ -112,12 +112,14 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
  <h2><span class="n">C</span>Email 0 — delivered instantly (everyone)</h2>
  <div class="email">
   <div class="meta"><span class="when">Immediate</span><span class="tag">all</span></div>
-  <div class="subj">Subject: Your Wave Prep Kit is inside</div>
-  <p class="pre">Preview: Your plan, the permit calendar, and the route sheet — as promised.</p>
+  <div class="subj">Subject: Your Wave pack list and training plan</div>
+  <p class="pre">Preview: What to carry, and eight weeks to get ready.</p>
   <div class="body">
    <p>Hi {{first_name}},</p>
-   <p>Here's your <b>Wave Prep Kit</b>, built from your answers: <a href="#">your personalized plan</a>, the permit-lottery calendar, the BLM landmark-photo route sheet, a water-and-heat plan, and a one-page packing checklist. Download it here → <a href="#">[link]</a></p>
-   <p>A bit about us: Wave Ready is made by Kanab locals and Wave guides with Dreamland Safari Tours, which pays for it. Some of Dreamland's guides volunteer on the BLM's Wave safety patrol and with Kane County search and rescue. We want you to have a great, safe day, on your own or with a guide.</p>
+   <p>Here's what you asked for.</p>
+   <p><b>Pack list.</b> A gallon of water per person (about 8.3 lb, more in summer), salty snacks or electrolytes, a sun hat and sunscreen, a headlamp, offline maps with the BLM's GPS points, shoes with real grip, rubber-tipped trekking poles, a battery pack, and a satellite messenger or someone at home with your route and return time.</p>
+   <p><b>8-week training plan.</b> Hike 4 to 5 days a week, build up to 6 miles or more with some climbing, and include walks of 1.5 miles or more in loose sand. Dreamland's full plan is here → <a class="cta" href="https://dreamlandtours.net/how-to-train-for-a-hike-to-the-wave/">How to train for The Wave</a></p>
+   <p>A bit about us: Wave Ready is made by the Kanab locals behind Dreamland Safari Tours, which pays for it. Some of Dreamland's guides volunteer on the BLM's Wave safety patrol and with Kane County search and rescue. We want you to have a great, safe day, on your own or with a guide.</p>
    <p>Over the next week or two I'll send a few useful notes tuned to your result ({{wave_tier}}). No spam, unsubscribe anytime. Hit reply if you have a question. One of us will answer.</p>
    <p class="sig">— The Wave Ready crew<br>Kanab, UT · supported by Dreamland Safari Tours</p>
   </div>
@@ -132,9 +134,9 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
   <p class="pre">Preview: Your scorecard already told you where you're thin.</p>
   <div class="body">
    <p>Hi {{first_name}},</p>
-   <p>Based on your answers, you could hike The Wave on your own once you sort out a couple of things. The Wave is a harder day than the photos suggest, and your plan shows which parts to work on first.</p>
+   <p>Based on your answers, a couple of things stand between you and a good day on your own. The Wave is a harder day than the photos suggest, and your plan shows which parts to work on first.</p>
    <p>Whatever your lowest bar was, that's your first project. The usual culprits: <b>route-finding</b> (there's no trail — you match landmark photos across look-alike slickrock), <b>heat &amp; timing</b> (be walking by first light, carry a gallon of water), and <b>the road</b> (a rental in the wet is how people get stuck). Your plan lists the specific fix for each.</p>
-   <p>Re-open your plan and pick one thing to lock down this week → <a href="#">[link]</a></p>
+   <p>Pick one thing from your plan and lock it down this week. You can take the quiz again any time → <a href="#">Wave Ready</a></p>
    <p class="sig">— Wave Ready</p>
   </div>
  </div>
@@ -183,8 +185,8 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
  <div class="track"><div class="th"><h3>Track B — Solo playbook</h3><span class="trig">fires when <code>wave_tier = solo</code></span></div></div>
 
  <div class="email"><div class="meta"><span class="when">Day 1</span></div>
-  <div class="subj">Subject: You're cleared to go solo — here's the playbook</div>
-  <p class="pre">Preview: The five things that make it smooth and safe.</p>
+  <div class="subj">Subject: Going on your own: the short version</div>
+  <p class="pre">Preview: Five things to get right on the day.</p>
   <div class="body">
    <p>Hi {{first_name}}, based on your answers you could hike The Wave on your own. Here's the short version of doing it right:</p>
    <ol>
@@ -194,7 +196,7 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
     <li>Carry a satellite messenger. Cell service is spotty at the trailhead and mostly absent on the route.</li>
     <li>A normal high-clearance vehicle is fine for the trailhead when the road's dry; skip it if it's been wet.</li>
    </ol>
-   <p>It's all in your plan → <a href="#">[link]</a>. Go get it.</p>
+   <p>Conditions on the day decide, so check the forecast and the road the night before, and turn back if anything feels wrong.</p>
    <p class="sig">— Wave Ready</p>
   </div>
  </div>
@@ -239,7 +241,7 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
     <li><b>Advance lottery:</b> apply ~4 months ahead, any device.</li>
     <li><b>Daily geofence lottery:</b> apply on your phone, inside the geofence, 2 days before.</li>
    </ul>
-   <p>Your Prep Kit has the calendar with the exact apply-by dates. Full mechanics here → <a class="cta" href="https://dreamlandtours.net/permits/">How the Wave permit works</a></p>
+   <p>To hike in a given month, enter the online lottery four months earlier: for April, enter during December. Daily lottery winners must be at the Kanab or Page permit office at 8:30 the next morning for a safety briefing. Full mechanics here → <a class="cta" href="https://dreamlandtours.net/permits/">How the Wave permit works</a></p>
    <p class="sig">— Wave Ready</p>
   </div>
  </div>
@@ -278,7 +280,7 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
   <div class="subj">Subject: When the light is best at the Wave</div>
   <p class="pre">Preview: Mid-morning for the Wave, afternoon for Melody Arch.</p>
   <div class="body">
-   <p>The Wave itself photographs best from mid-morning to midday, when the sun is high enough that <b>no shadow</b> falls across the formation. Afternoon light suits Melody Arch and the side features.</p>
+   <p>The Wave itself photographs best in the mid-morning hours, when the sun is high enough that <b>no shadow</b> falls across the formation. Afternoon light suits Melody Arch and the side features.</p>
    <p>Start hiking at first light either way. In hot months, finish your photos by late morning and start back before the heat. If you stay for late light, carry a headlamp, save your return track and set a turnaround time.</p>
    <p class="sig">— Wave Ready</p>
   </div>
@@ -313,9 +315,9 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
   <p class="pre">Preview: You've got the hard part. Here's the prep that matters.</p>
   <div class="body">
    <p>Hi {{first_name}} — congratulations. A permit for {{wave_permit_month}} is the part most people never get. Now the job is to be ready for it.</p>
-   <p>Based on your check ({{wave_tier}}), spend the next few weeks here: study the route (there's no trail — you match landmark photos), dial your fitness for ~6 miles of sand and slickrock, sort your gear and water, and prep for exactly what {{wave_permit_month}} throws at you — heat, cold, or storms (your season's specific warnings are in your kit, tailored to your month). Your prep kit has the full countdown.</p>
+   <p>Based on your check ({{wave_tier}}), spend the next few weeks here: study the route (there's no trail — you match landmark photos), dial your fitness for ~6 miles of sand and slickrock, sort your gear and water, and prep for exactly what {{wave_permit_month}} throws at you: heat, cold, or storms. Your month's warnings are below.</p>
    <p>If your result said solo would be a nail-biter, use the time you have to close the gap, or book a guide for your date so the day is a good one either way.</p>
-   <p><a class="cta" href="#">Open your countdown plan</a></p>
+   <p><a class="cta" href="#">Take the quiz again for your month</a></p>
    <p class="sig">— Wave Ready</p>
   </div>
  </div>
@@ -355,7 +357,7 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
   <p class="pre">Preview: If the guides can help with your trip, here's the door.</p>
   <div class="body">
    <p>Hi {{first_name}}, one last note as this wraps up.</p>
-   <p>Wave Ready is supported by <b>Dreamland Safari Tours</b>, the Kanab outfitter that helps build and run it. We've kept them in the background on purpose, because this is a safety tool first. But if you're planning a Vermilion Cliffs trip — the Wave, White Pocket, the slot canyons, or you just want permit reminders and the occasional local tip straight from the guides — they'd love to help directly.</p>
+   <p>Wave Ready is supported by <b>Dreamland Safari Tours</b>, the Kanab outfitter that helps build and run it. If you're planning a Vermilion Cliffs trip — the Wave, White Pocket, the slot canyons, or you just want permit reminders and the occasional local tip straight from the guides — they'd love to help directly.</p>
    <p>Want that? Join Dreamland's list — one click, and you can leave anytime.</p>
    <p><a class="cta" href="https://dreamlandtours.net/">Yes, connect me with Dreamland</a></p>
    <p>Either way, thanks for letting us be part of your trip. Hike smart out there.</p>
@@ -372,9 +374,8 @@ nav.jump a{font-size:.8rem;background:var(--paper-2);color:var(--ink-2);text-dec
   <p class="pre">Preview: The options nobody tells the people who lose.</p>
   <div class="body">
    <p>Results are out, and if your name wasn't on the list — you're in the majority, and you're not out of luck.</p>
-   <p>You can enter again (your Prep Kit has next month's dates), or you can have a jaw-dropping day <em>now</em> at a place with far better odds: White Pocket (no permit at all), or South Coyote Buttes (a permit that's much easier to win than the Wave). And if you want another chance at the Wave itself, Dreamland's Conditional tour enters the daily lottery for you, with a guaranteed guided day if it misses.</p>
-   <p>Don't let a lottery decide whether you see this place.</p>
-   <p><a class="cta" href="https://dreamlandtours.net/wave-conditional-tour/">See your options</a></p>
+   <p>You can enter again next month, or you can have a jaw-dropping day <em>now</em> at a place with far better odds: White Pocket (no permit at all), or South Coyote Buttes (a permit that's much easier to win than the Wave). And if you want another chance at the Wave itself, Dreamland's Conditional tour enters the daily lottery for you, with a guaranteed guided day if it misses.</p>
+      <p><a class="cta" href="https://dreamlandtours.net/wave-conditional-tour/">See your options</a></p>
    <p class="sig">— Wave Ready</p>
   </div>
  </div>
